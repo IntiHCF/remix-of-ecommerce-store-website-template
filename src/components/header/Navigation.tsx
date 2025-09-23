@@ -136,16 +136,18 @@ const Navigation = () => {
                 {navItems
                   .find(item => item.name === activeDropdown)
                   ?.images.map((image, index) => (
-                  <div key={index} className="w-200 h-150 cursor-pointer group relative overflow-hidden">
+                  <div key={index} className="w-100 h-75 cursor-pointer group relative overflow-hidden">
                     <img 
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-90"
                     />
-                    <div className="absolute bottom-4 left-4 text-white text-sm font-light flex items-center gap-2">
-                      <span>{image.label}</span>
-                      <ArrowRight size={14} />
-                    </div>
+                    {activeDropdown === "Shop" && (
+                      <div className="absolute bottom-4 left-4 text-white text-sm font-light flex items-center gap-2">
+                        <span>{image.label}</span>
+                        <ArrowRight size={14} />
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
