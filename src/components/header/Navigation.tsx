@@ -112,17 +112,17 @@ const Navigation = () => {
           onMouseLeave={() => setActiveDropdown(null)}
         >
           <div className="px-6 py-8">
-            <div className="flex justify-between max-w-6xl mx-auto">
+            <div className="flex justify-between w-full">
               {/* Left side - Menu items */}
               <div className="flex-1">
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {navItems
                     .find(item => item.name === activeDropdown)
                     ?.submenuItems.map((subItem, index) => (
                     <li key={index}>
                       <a 
                         href="#"
-                        className="text-nav-foreground hover:text-nav-hover transition-colors duration-200 text-sm font-light block py-1"
+                        className="text-nav-foreground hover:text-nav-hover transition-colors duration-200 text-base font-light block py-2"
                       >
                         {subItem}
                       </a>
@@ -132,15 +132,15 @@ const Navigation = () => {
               </div>
 
               {/* Right side - Images */}
-              <div className="flex space-x-4 ml-12">
+              <div className="flex space-x-6">
                 {navItems
                   .find(item => item.name === activeDropdown)
                   ?.images.map((image, index) => (
-                  <div key={index} className="w-48 h-32 cursor-pointer group">
+                  <div key={index} className="w-80 h-60 cursor-pointer group">
                     <img 
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-90"
                     />
                   </div>
                 ))}
