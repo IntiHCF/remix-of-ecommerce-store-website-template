@@ -81,22 +81,22 @@ const Navigation = () => {
 
   return (
     <nav className="bg-nav border-b border-border relative">
-      <div className="flex items-center justify-between h-16 px-6">
+      <div className="flex items-center justify-between h-16 px-4">
         {/* Mobile hamburger button */}
         <button
           className="md:hidden p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <div className="w-6 h-6 relative">
-            <span className={`absolute block w-6 h-0.5 bg-current transform transition-all duration-300 ${
-              isMobileMenuOpen ? 'rotate-45 top-3' : 'top-1'
+          <div className="w-5 h-5 relative">
+            <span className={`absolute block w-5 h-px bg-current transform transition-all duration-300 ${
+              isMobileMenuOpen ? 'rotate-45 top-2.5' : 'top-0.5'
             }`}></span>
-            <span className={`absolute block w-6 h-0.5 bg-current transform transition-all duration-300 top-3 ${
+            <span className={`absolute block w-5 h-px bg-current transform transition-all duration-300 top-2.5 ${
               isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
             }`}></span>
-            <span className={`absolute block w-6 h-0.5 bg-current transform transition-all duration-300 ${
-              isMobileMenuOpen ? '-rotate-45 top-3' : 'top-5'
+            <span className={`absolute block w-5 h-px bg-current transform transition-all duration-300 ${
+              isMobileMenuOpen ? '-rotate-45 top-2.5' : 'top-4.5'
             }`}></span>
           </div>
         </button>
