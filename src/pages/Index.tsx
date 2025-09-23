@@ -3,6 +3,7 @@ import Footer from "../components/footer/Footer";
 import LargeHero from "../components/content/LargeHero";
 import FiftyFiftySection from "../components/content/FiftyFiftySection";
 import OneThirdTwoThirdsSection from "../components/content/OneThirdTwoThirdsSection";
+import ProductCarousel from "../components/content/ProductCarousel";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
         <FiftyFiftySection />
         <LargeHero />
         <OneThirdTwoThirdsSection />
+        <ProductCarousel />
       </main>
       
       <Footer />
