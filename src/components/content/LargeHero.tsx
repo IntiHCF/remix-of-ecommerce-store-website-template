@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-image.png";
 const LargeHero = () => {
   return (
     <section className="w-full mb-16 px-6">
-      <div className="w-full aspect-[16/9] mb-6 overflow-hidden">
+      <div className="w-full aspect-[16/9] mb-3 overflow-hidden">
         <img 
           src={heroImage} 
           alt="Modern jewelry collection" 
@@ -11,10 +11,10 @@ const LargeHero = () => {
         />
       </div>
       <div className="">
-        <h2 className="text-sm font-light text-foreground mb-2">
+        <h2 className="text-sm font-normal text-foreground mb-1">
           Modern Heritage
         </h2>
-        <p className="text-sm font-light text-muted-foreground">
+        <p className="text-sm font-light text-foreground">
           Contemporary jewelry crafted with timeless elegance
         </p>
       </div>

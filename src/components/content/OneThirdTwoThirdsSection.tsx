@@ -6,7 +6,7 @@ const OneThirdTwoThirdsSection = () => {
     <section className="w-full mb-16 px-6">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1">
-          <div className="w-full aspect-square mb-6 overflow-hidden">
+          <div className="w-full aspect-square mb-3 overflow-hidden">
             <img 
               src={organicEarring} 
               alt="Artisan crafted jewelry" 
@@ -14,17 +14,17 @@ const OneThirdTwoThirdsSection = () => {
             />
           </div>
           <div className="">
-            <h3 className="text-sm font-light text-foreground mb-2">
+            <h3 className="text-sm font-normal text-foreground mb-1">
               Artisan Craft
             </h3>
-            <p className="text-sm font-light text-muted-foreground">
+            <p className="text-sm font-light text-foreground">
               Handcrafted pieces with meticulous attention to detail
             </p>
           </div>
         </div>
 
         <div className="lg:col-span-2">
-          <div className="w-full aspect-[2/1] mb-6 overflow-hidden">
+          <div className="w-full aspect-[2/1] mb-3 overflow-hidden">
             <img 
               src={circularCollection} 
               alt="Circular jewelry collection" 
@@ -32,10 +32,10 @@ const OneThirdTwoThirdsSection = () => {
             />
           </div>
           <div className="">
-            <h3 className="text-sm font-light text-foreground mb-2">
+            <h3 className="text-sm font-normal text-foreground mb-1">
               Circular Elements
             </h3>
-            <p className="text-sm font-light text-muted-foreground">
+            <p className="text-sm font-light text-foreground">
               Geometric perfection meets contemporary minimalism
             </p>
           </div>

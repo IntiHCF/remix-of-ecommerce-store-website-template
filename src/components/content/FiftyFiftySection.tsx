@@ -6,7 +6,7 @@ const FiftyFiftySection = () => {
     <section className="w-full mb-16 px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div className="w-full aspect-square mb-6 overflow-hidden">
+          <div className="w-full aspect-square mb-3 overflow-hidden">
             <img 
               src={organicEarring} 
               alt="Organic earring design" 
@@ -14,17 +14,17 @@ const FiftyFiftySection = () => {
             />
           </div>
           <div className="">
-            <h3 className="text-sm font-light text-foreground mb-2">
+            <h3 className="text-sm font-normal text-foreground mb-1">
               Organic Forms
             </h3>
-            <p className="text-sm font-light text-muted-foreground">
+            <p className="text-sm font-light text-foreground">
               Nature-inspired pieces with fluid, sculptural details
             </p>
           </div>
         </div>
 
         <div>
-          <div className="w-full aspect-square mb-6 overflow-hidden">
+          <div className="w-full aspect-square mb-3 overflow-hidden">
             <img 
               src={linkBracelet} 
               alt="Chain link bracelet" 
@@ -32,10 +32,10 @@ const FiftyFiftySection = () => {
             />
           </div>
           <div className="">
-            <h3 className="text-sm font-light text-foreground mb-2">
+            <h3 className="text-sm font-normal text-foreground mb-1">
               Chain Collection
             </h3>
-            <p className="text-sm font-light text-muted-foreground">
+            <p className="text-sm font-light text-foreground">
               Refined links and connections in precious metals
             </p>
           </div>
