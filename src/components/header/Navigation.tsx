@@ -1,9 +1,10 @@
-import { Search, User, ShoppingBag, ArrowRight } from "lucide-react";
+import { Search, User, ShoppingBag, ArrowRight, Heart, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [offCanvasType, setOffCanvasType] = useState<'favorites' | 'cart' | null>(null);
   
   // Preload dropdown images for faster display
   useEffect(() => {
@@ -117,13 +118,15 @@ const Navigation = () => {
           </button>
           <button 
             className="p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
-            aria-label="Account"
+            aria-label="Favorites"
+            onClick={() => setOffCanvasType('favorites')}
           >
-            <User size={20} />
+            <Heart size={20} />
           </button>
           <button 
             className="p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200 relative"
             aria-label="Shopping bag"
+            onClick={() => setOffCanvasType('cart')}
           >
             <ShoppingBag size={20} />
           </button>
@@ -216,6 +219,92 @@ const Navigation = () => {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Off-canvas overlay */}
+      {offCanvasType && (
+        <div className="fixed inset-0 z-50">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setOffCanvasType(null)}
+          />
+          
+          {/* Off-canvas panel */}
+          <div className="absolute right-0 top-0 h-full w-96 bg-background border-l border-border shadow-xl">
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-border">
+              <h2 className="text-lg font-light text-foreground">
+                {offCanvasType === 'favorites' ? 'Your Favorites' : 'Shopping Bag'}
+              </h2>
+              <button
+                onClick={() => setOffCanvasType(null)}
+                className="p-2 text-foreground hover:text-muted-foreground transition-colors"
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            
+            {/* Content */}
+            <div className="p-6">
+              {offCanvasType === 'favorites' ? (
+                <div>
+                  <p className="text-muted-foreground text-sm mb-6">
+                    You haven't added any favorites yet. Browse our collection and click the heart icon to save items you love.
+                  </p>
+                  <div className="space-y-4">
+                    {/* Placeholder favorite items */}
+                    {[1, 2, 3].map((item) => (
+                      <div key={item} className="flex items-center space-x-4 p-4 border border-border rounded-lg">
+                        <div className="w-16 h-16 bg-muted rounded-md"></div>
+                        <div className="flex-1">
+                          <h4 className="font-light text-foreground">Sample Ring {item}</h4>
+                          <p className="text-sm text-muted-foreground">$299.00</p>
+                        </div>
+                        <button className="p-2 text-muted-foreground hover:text-foreground">
+                          <Heart size={16} fill="currentColor" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p className="text-muted-foreground text-sm mb-6">
+                    Your shopping bag is empty. Continue shopping to add items to your bag.
+                  </p>
+                  <div className="space-y-4">
+                    {/* Placeholder cart items */}
+                    {[1, 2].map((item) => (
+                      <div key={item} className="flex items-center space-x-4 p-4 border border-border rounded-lg">
+                        <div className="w-16 h-16 bg-muted rounded-md"></div>
+                        <div className="flex-1">
+                          <h4 className="font-light text-foreground">Sample Necklace {item}</h4>
+                          <p className="text-sm text-muted-foreground">Quantity: 1</p>
+                          <p className="text-sm font-medium text-foreground">$459.00</p>
+                        </div>
+                        <button className="p-2 text-muted-foreground hover:text-foreground">
+                          <X size={16} />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <div className="flex justify-between mb-4">
+                      <span className="text-foreground">Subtotal</span>
+                      <span className="text-foreground font-medium">$918.00</span>
+                    </div>
+                    <button className="w-full bg-foreground text-background py-3 px-4 rounded-sm font-light transition-colors hover:bg-foreground/90">
+                      Checkout
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
