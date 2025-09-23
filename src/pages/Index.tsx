@@ -8,7 +8,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-16">
+      <main className="py-16">
         <LargeHero />
         <FiftyFiftySection />
         <OneThirdTwoThirdsSection />

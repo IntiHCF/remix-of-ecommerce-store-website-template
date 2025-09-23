@@ -4,7 +4,7 @@ import linkBracelet from "@/assets/link-bracelet.png";
 const FiftyFiftySection = () => {
   return (
     <section className="w-full mb-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <div>
           <div className="w-full aspect-square mb-6 overflow-hidden">
             <img 

@@ -10,7 +10,7 @@ const LargeHero = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="px-4">
+      <div className="container mx-auto px-4">
         <h2 className="text-sm font-light text-foreground mb-2">
           Modern Heritage
         </h2>
