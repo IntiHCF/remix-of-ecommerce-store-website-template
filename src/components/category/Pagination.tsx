@@ -8,7 +8,7 @@ const Pagination = () => {
         <Button 
           variant="ghost" 
           size="sm" 
-          className="p-2 hover:bg-transparent hover:opacity-50 disabled:opacity-30" 
+          className="p-2 hover:bg-transparent hover:opacity-50 disabled:opacity-30 -ml-2" 
           disabled
         >
           <ChevronLeft className="h-4 w-4" />
