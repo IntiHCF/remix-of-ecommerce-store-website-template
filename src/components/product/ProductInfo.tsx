@@ -16,7 +16,7 @@ const ProductInfo = () => {
         <span className="mx-2">/</span>
         <span>Earrings</span>
         <span className="mx-2">/</span>
-        <span>Pantheon</span>
+        <span className="text-foreground font-normal">Pantheon</span>
       </div>
 
       {/* Product title and price */}
