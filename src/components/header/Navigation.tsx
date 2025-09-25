@@ -149,7 +149,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between h-16 px-6">
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden p-2 mt-0.5 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
+          className="lg:hidden p-2 mt-0.5 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -166,8 +166,8 @@ const Navigation = () => {
           </div>
         </button>
 
-        {/* Left navigation - Hidden on mobile */}
-        <div className="hidden md:flex space-x-8">
+        {/* Left navigation - Hidden on tablets and mobile */}
+        <div className="hidden lg:flex space-x-8">
           {navItems.map((item) => (
             <div
               key={item.name}
@@ -208,7 +208,7 @@ const Navigation = () => {
             </svg>
           </button>
           <button 
-            className="hidden md:block p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
+            className="hidden lg:block p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
             aria-label="Favorites"
             onClick={() => setOffCanvasType('favorites')}
           >
@@ -328,7 +328,7 @@ const Navigation = () => {
 
       {/* Mobile navigation menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-nav border-b border-border z-50">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-nav border-b border-border z-50">
           <div className="px-6 py-8">
             <div className="space-y-6">
               {navItems.map((item, index) => (
