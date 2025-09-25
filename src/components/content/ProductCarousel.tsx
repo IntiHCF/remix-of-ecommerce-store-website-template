@@ -2,7 +2,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -78,11 +77,11 @@ const ProductCarousel = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="">
             {products.map((product) => (
                <CarouselItem
                  key={product.id}
-                 className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                 className="basis-1/2 md:basis-1/3 lg:basis-1/4 pr-2 md:pr-4"
                >
                  <Link to={`/product/${product.id}`}>
                   <Card className="border-none shadow-none bg-transparent group">
@@ -124,7 +123,6 @@ const ProductCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 border-none bg-transparent hover:bg-transparent h-8 w-8 rounded-none" />
         </Carousel>
     </section>
   );
