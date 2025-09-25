@@ -75,10 +75,10 @@ const Footer = () => {
             © 2024 Linea. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-sm font-light text-black hover:text-black/70 transition-colors">
+            <a href="/privacy-policy" className="text-sm font-light text-black hover:text-black/70 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm font-light text-black hover:text-black/70 transition-colors">
+            <a href="/terms-of-service" className="text-sm font-light text-black hover:text-black/70 transition-colors">
               Terms of Service
             </a>
           </div>
