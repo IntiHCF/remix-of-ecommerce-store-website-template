@@ -99,7 +99,7 @@ const CustomerCare = () => {
         </ContentSection>
 
         <ContentSection title="Contact Form">
-          <div className="max-w-2xl mx-auto">
+          <div>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">

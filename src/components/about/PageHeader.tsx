@@ -10,7 +10,7 @@ const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
         {title}
       </h1>
       {subtitle && (
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground">
           {subtitle}
         </p>
       )}

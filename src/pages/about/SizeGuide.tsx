@@ -123,7 +123,7 @@ const SizeGuide = () => {
 
         <ContentSection title="Need Help?">
           <div className="text-center space-y-6">
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-center">
               Still unsure about sizing? Our jewelry consultants are here to help you find the perfect fit. 
               Download our printable size guide or schedule a virtual consultation.
             </p>

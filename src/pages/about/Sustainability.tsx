@@ -74,7 +74,7 @@ const Sustainability = () => {
 
         <ContentSection title="Certifications & Partnerships">
           <div className="text-center space-y-8">
-            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed text-center">
               Our commitment to sustainability is verified through partnerships with leading organizations and certifications that hold us accountable to the highest standards.
             </p>
             

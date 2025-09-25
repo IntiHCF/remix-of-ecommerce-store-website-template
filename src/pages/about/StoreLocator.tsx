@@ -85,7 +85,7 @@ const StoreLocator = () => {
         </ContentSection>
 
         <ContentSection title="Private Appointments">
-          <div className="text-center space-y-6 max-w-3xl mx-auto">
+          <div className="text-center space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Experience personalized service with a private appointment. Our jewelry consultants will guide you through our collections, help with custom designs, and provide expert advice in a comfortable, private setting.
             </p>
@@ -122,7 +122,7 @@ const StoreLocator = () => {
         <ContentSection title="Virtual Consultations">
           <div className="bg-muted/10 rounded-lg p-8 text-center">
             <h3 className="text-xl font-light text-foreground mb-4">Can't visit in person?</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-6">
               Book a virtual consultation with one of our jewelry experts. We'll showcase pieces via video call, 
               answer your questions, and help you make the perfect selection from the comfort of your home.
             </p>
