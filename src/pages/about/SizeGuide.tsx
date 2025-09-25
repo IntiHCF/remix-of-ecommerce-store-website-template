@@ -10,10 +10,10 @@ const SizeGuide = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="flex">
+      <div className="flex justify-end">
         <AboutSidebar />
         
-        <main className="flex-1 md:w-1/2">
+        <main className="w-full md:w-[50vw]">
         <PageHeader 
           title="Size Guide" 
           subtitle="Find your perfect fit with our comprehensive sizing guide"

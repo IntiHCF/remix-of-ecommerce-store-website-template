@@ -10,10 +10,10 @@ const OurStory = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="flex">
+      <div className="flex justify-end">
         <AboutSidebar />
         
-        <main className="flex-1 md:w-1/2">
+        <main className="w-full md:w-[50vw]">
           <PageHeader 
             title="Our Story" 
             subtitle="A journey of passion, craftsmanship, and timeless elegance"
