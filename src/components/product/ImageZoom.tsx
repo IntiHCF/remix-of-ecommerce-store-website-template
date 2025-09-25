@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -10,6 +10,8 @@ interface ImageZoomProps {
 }
 
 const ImageZoom = ({ images, initialIndex, isOpen, onClose }: ImageZoomProps) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -28,6 +30,16 @@ const ImageZoom = ({ images, initialIndex, isOpen, onClose }: ImageZoomProps) =>
     };
   }, [isOpen, onClose]);
 
+  // Scroll to the selected image when modal opens
+  useEffect(() => {
+    if (isOpen && scrollRef.current) {
+      const imageElement = scrollRef.current.children[0]?.children[initialIndex] as HTMLElement;
+      if (imageElement) {
+        imageElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [isOpen, initialIndex]);
+
   if (!isOpen) return null;
 
   return (
@@ -43,13 +55,13 @@ const ImageZoom = ({ images, initialIndex, isOpen, onClose }: ImageZoomProps) =>
         variant="ghost"
         size="sm"
         onClick={onClose}
-        className="absolute top-4 right-4 z-10 hover:bg-transparent text-black border-none p-2"
+        className="absolute top-6 right-6 z-10 hover:bg-transparent text-black border-none p-2"
       >
-        <X className="h-16 w-16" />
+        <X className="h-8 w-8" />
       </Button>
 
       {/* Scrollable image container */}
-      <div className="relative w-full h-full overflow-y-auto">
+      <div ref={scrollRef} className="relative w-full h-full overflow-y-auto">
         <div className="space-y-4">
           {images.map((image, index) => (
             <div key={index} className="w-full flex justify-center">
