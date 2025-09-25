@@ -9,10 +9,10 @@ const Sustainability = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="flex justify-end">
+      <div className="flex">
         <AboutSidebar />
         
-        <main className="w-full md:w-[50vw]">
+        <main className="w-full md:w-[50vw] md:ml-auto">
         <PageHeader 
           title="Sustainability" 
           subtitle="Creating beautiful jewelry while protecting our planet for future generations"
