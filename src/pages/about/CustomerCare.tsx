@@ -21,7 +21,7 @@ const CustomerCare = () => {
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
         <PageHeader 
           title="Customer Care" 
-          subtitle="We're here to help you with all your jewelry needs"
+          subtitle="We're here to help you with all your plant needs"
         />
         
         <ContentSection title="Contact Information">
@@ -33,7 +33,7 @@ const CustomerCare = () => {
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-light text-foreground">Email</h3>
-              <p className="text-muted-foreground">care@lineajewelry.com</p>
+              <p className="text-muted-foreground">care@lineaplants.com</p>
               <p className="text-sm text-muted-foreground">Response within 24 hours</p>
             </div>
             <div className="space-y-4">
@@ -50,55 +50,55 @@ const CustomerCare = () => {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="shipping" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                What are your shipping options and timeframes?
+                How are plants shipped and how long does delivery take?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                We offer free standard shipping (3-5 business days) on orders over $500. Express shipping (1-2 business days) is available for $25. All orders are fully insured and require signature confirmation.
+                All plants are carefully packaged in custom boxes with protective wrapping. Standard delivery takes 2-4 business days. Express shipping (next day) is available for €15. We ship Monday-Wednesday to avoid plants sitting in warehouses over weekends.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="returns" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                What is your return and exchange policy?
+                What if my plant arrives damaged?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                We offer a 30-day return policy for unworn items in original condition. Custom and engraved pieces are final sale. Returns are free with our prepaid return label.
+                We offer a 30-day plant health guarantee. If your plant arrives damaged or doesn't thrive within 30 days, send us a photo and we'll send a free replacement. No need to return the original plant.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="warranty" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                What warranty do you offer on your jewelry?
+                Do you offer plant care support?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                All LINEA jewelry comes with a lifetime warranty against manufacturing defects. This includes free repairs for normal wear and tear, stone tightening, and professional cleaning.
+                Absolutely! Every plant comes with a detailed care card. You can also reach our plant specialists via email or chat for personalized advice. We offer free plant health check-ups — just send us a photo.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="sizing" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                Can I resize my jewelry after purchase?
+                What pot sizes do you offer?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Yes, we offer free ring resizing within 60 days of purchase (up to 2 sizes). Additional resizing is available for a service fee. Some designs cannot be resized due to their construction.
+                Our plants come in various sizes from small desktop plants (9cm pot) to large statement plants (27cm pot). Each product page lists the exact pot diameter and estimated plant height.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="care" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                How should I care for my LINEA jewelry?
+                How should I care for my new plant after delivery?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Store pieces separately in soft pouches, avoid contact with chemicals and cosmetics, and clean gently with a soft cloth. We recommend professional cleaning every 6-12 months.
+                Unpack immediately and place in a spot with appropriate light. Wait 2-3 days before watering to let the plant acclimate. Avoid repotting for at least 2 weeks. Check our Plant Care Guide for species-specific advice.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="authentication" className="border border-border rounded-lg px-6">
               <AccordionTrigger className="text-left hover:no-underline">
-                How can I verify the authenticity of my jewelry?
+                Are your plants pet-safe?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Every LINEA piece comes with a certificate of authenticity and is hallmarked. You can verify authenticity on our website using your unique piece number or contact our customer care team.
+                Each product page clearly indicates whether the plant is pet-friendly. We have a dedicated "Pet Safe" collection for homes with furry friends. Popular pet-safe options include Spider Plants, Calathea, and Boston Ferns.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
