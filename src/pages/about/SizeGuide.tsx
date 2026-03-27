@@ -9,134 +9,93 @@ const SizeGuide = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       <div className="flex">
-        <div className="hidden lg:block">
-          <AboutSidebar />
-        </div>
-        
+        <div className="hidden lg:block"><AboutSidebar /></div>
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
-        <PageHeader 
-          title="Plant Care Guide" 
-          subtitle="Everything you need to keep your plants thriving"
-        />
-        
-        <ContentSection title="Light Requirements">
-          <div className="space-y-8">
-            <div className="bg-muted/10 rounded-lg p-8">
-              <h3 className="text-xl font-light text-foreground mb-6">Understanding Light Levels</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h4 className="font-medium text-foreground">Bright Indirect Light</h4>
-                  <p className="text-muted-foreground">
-                    Near a window but not in direct sunlight. Most tropical plants thrive here — Monsteras, Pothos, and Fiddle Leaf Figs love this spot.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-medium text-foreground">Low to Medium Light</h4>
-                  <p className="text-muted-foreground">
-                    Further from windows or north-facing rooms. Snake Plants, ZZ Plants, and Peace Lilies are perfect for these conditions.
-                  </p>
+          <PageHeader title="Trainer Guide" subtitle="Everything you need to become a great Pokémon trainer" />
+          <ContentSection title="Pokémon Types & Matchups">
+            <div className="space-y-8">
+              <div className="bg-muted/10 rounded-lg p-8">
+                <h3 className="text-xl font-light text-foreground mb-6">Understanding Type Advantages</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <h4 className="font-medium text-foreground">Offensive Advantages</h4>
+                    <p className="text-muted-foreground">Fire beats Grass, Water beats Fire, Grass beats Water. Electric is super effective against Water and Flying types.</p>
+                  </div>
+                  <div className="space-y-4">
+                    <h4 className="font-medium text-foreground">Defensive Resistances</h4>
+                    <p className="text-muted-foreground">Steel resists many types, Ghost is immune to Normal and Fighting. Understanding resistances is key to building a balanced team.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-border">
-                <thead>
-                  <tr className="bg-muted/20">
-                    <th className="border border-border p-3 text-left font-light">Plant</th>
-                    <th className="border border-border p-3 text-left font-light">Light</th>
-                    <th className="border border-border p-3 text-left font-light">Water</th>
-                    <th className="border border-border p-3 text-left font-light">Humidity</th>
-                    <th className="border border-border p-3 text-left font-light">Difficulty</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { plant: "Monstera", light: "Bright indirect", water: "Weekly", humidity: "Medium-High", difficulty: "Easy" },
-                    { plant: "Snake Plant", light: "Low to bright", water: "Every 2-3 weeks", humidity: "Low", difficulty: "Very Easy" },
-                    { plant: "Pothos", light: "Low to bright", water: "Weekly", humidity: "Low-Medium", difficulty: "Very Easy" },
-                    { plant: "Fiddle Leaf Fig", light: "Bright indirect", water: "Weekly", humidity: "Medium", difficulty: "Moderate" },
-                    { plant: "Peace Lily", light: "Low to medium", water: "Weekly", humidity: "Medium", difficulty: "Easy" },
-                    { plant: "ZZ Plant", light: "Low to bright", water: "Every 2-3 weeks", humidity: "Low", difficulty: "Very Easy" },
-                    { plant: "Bird of Paradise", light: "Bright direct", water: "Weekly", humidity: "Medium", difficulty: "Moderate" },
-                    { plant: "Calathea", light: "Medium indirect", water: "Keep moist", humidity: "High", difficulty: "Advanced" },
-                    { plant: "String of Pearls", light: "Bright indirect", water: "Every 2 weeks", humidity: "Low", difficulty: "Moderate" },
-                  ].map((row, index) => (
-                    <tr key={index} className="hover:bg-muted/10">
-                      <td className="border border-border p-3">{row.plant}</td>
-                      <td className="border border-border p-3">{row.light}</td>
-                      <td className="border border-border p-3">{row.water}</td>
-                      <td className="border border-border p-3">{row.humidity}</td>
-                      <td className="border border-border p-3">{row.difficulty}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-border">
+                  <thead>
+                    <tr className="bg-muted/20">
+                      <th className="border border-border p-3 text-left font-light">Type</th>
+                      <th className="border border-border p-3 text-left font-light">Strong Against</th>
+                      <th className="border border-border p-3 text-left font-light">Weak Against</th>
+                      <th className="border border-border p-3 text-left font-light">Resistant To</th>
+                      <th className="border border-border p-3 text-left font-light">Best For</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {[
+                      { type: "Fire", strong: "Grass, Ice, Bug, Steel", weak: "Water, Rock, Ground", resist: "Fire, Grass, Ice, Bug, Steel, Fairy", best: "Offense" },
+                      { type: "Water", strong: "Fire, Ground, Rock", weak: "Electric, Grass", resist: "Fire, Water, Ice, Steel", best: "Versatile" },
+                      { type: "Grass", strong: "Water, Ground, Rock", weak: "Fire, Ice, Poison, Flying, Bug", resist: "Water, Electric, Grass, Ground", best: "Status moves" },
+                      { type: "Electric", strong: "Water, Flying", weak: "Ground", resist: "Electric, Flying, Steel", best: "Speed" },
+                      { type: "Psychic", strong: "Fighting, Poison", weak: "Bug, Dark, Ghost", resist: "Fighting, Psychic", best: "Special Attack" },
+                      { type: "Ghost", strong: "Psychic, Ghost", weak: "Dark, Ghost", resist: "Poison, Bug (immune: Normal, Fighting)", best: "Tricky plays" },
+                      { type: "Dragon", strong: "Dragon", weak: "Ice, Dragon, Fairy", resist: "Fire, Water, Grass, Electric", best: "Raw power" },
+                      { type: "Dark", strong: "Psychic, Ghost", weak: "Fighting, Bug, Fairy", resist: "Dark, Ghost (immune: Psychic)", best: "Mind games" },
+                      { type: "Fairy", strong: "Fighting, Dragon, Dark", weak: "Poison, Steel", resist: "Fighting, Bug, Dark (immune: Dragon)", best: "Dragon counters" },
+                    ].map((row, index) => (
+                      <tr key={index} className="hover:bg-muted/10">
+                        <td className="border border-border p-3 font-medium">{row.type}</td>
+                        <td className="border border-border p-3">{row.strong}</td>
+                        <td className="border border-border p-3">{row.weak}</td>
+                        <td className="border border-border p-3">{row.resist}</td>
+                        <td className="border border-border p-3">{row.best}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        </ContentSection>
-
-        <ContentSection title="Watering & Feeding">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Watering Tips</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Tropical Plants</span>
-                  <span className="text-foreground">When top 2-3cm dry</span>
+          </ContentSection>
+          <ContentSection title="Training & Evolution">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-xl font-light text-foreground">Training Tips</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Beginner</span><span className="text-foreground">Start with type advantages</span></div>
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Intermediate</span><span className="text-foreground">Focus on EV training</span></div>
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Advanced</span><span className="text-foreground">Competitive team building</span></div>
                 </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Succulents</span>
-                  <span className="text-foreground">When fully dry</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Ferns</span>
-                  <span className="text-foreground">Keep consistently moist</span>
+              </div>
+              <div className="space-y-6">
+                <h3 className="text-xl font-light text-foreground">Evolution Methods</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Level Up</span><span className="text-foreground">Most common method</span></div>
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Evolution Stones</span><span className="text-foreground">Fire, Water, Thunder, etc.</span></div>
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Friendship</span><span className="text-foreground">Bond-based evolution</span></div>
+                  <div className="flex justify-between py-2 border-b border-border"><span className="text-muted-foreground">Trade</span><span className="text-foreground">Some require trading</span></div>
                 </div>
               </div>
             </div>
-            
+          </ContentSection>
+          <ContentSection title="Need Help?">
             <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Feeding Schedule</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Spring/Summer</span>
-                  <span className="text-foreground">Monthly with liquid feed</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Autumn</span>
-                  <span className="text-foreground">Every 6-8 weeks</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Winter</span>
-                  <span className="text-foreground">No feeding needed</span>
-                </div>
+              <p className="text-muted-foreground">Not sure which Pokémon is right for you? Our Pokémon specialists can help match you with the perfect companion based on your experience level and goals.</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="outline" className="rounded-none">Download Pokédex Guide</Button>
+                <Button className="rounded-none">Talk to a Specialist</Button>
               </div>
             </div>
-          </div>
-        </ContentSection>
-
-        <ContentSection title="Need Help?">
-          <div className="space-y-6">
-            <p className="text-muted-foreground">
-              Not sure what your plant needs? Our plant specialists are here to help. 
-              Send us a photo and we'll diagnose any issues and provide personalized care advice.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="outline" className="rounded-none">
-                Download Care Cards
-              </Button>
-              <Button className="rounded-none">
-                Ask a Plant Expert
-              </Button>
-            </div>
-          </div>
-        </ContentSection>
+          </ContentSection>
         </main>
       </div>
-      
       <Footer />
     </div>
   );
