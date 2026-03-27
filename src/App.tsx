@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/about/our-story" element={<OurStory />} />
           <Route path="/about/sustainability" element={<Sustainability />} />
           <Route path="/about/size-guide" element={<SizeGuide />} />
+          <Route path="/about/plant-care-guide" element={<SizeGuide />} />
           <Route path="/about/customer-care" element={<CustomerCare />} />
           <Route path="/about/store-locator" element={<StoreLocator />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
