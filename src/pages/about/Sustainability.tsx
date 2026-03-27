@@ -17,21 +17,21 @@ const Sustainability = () => {
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
         <PageHeader 
           title="Sustainability" 
-          subtitle="Creating beautiful jewelry while protecting our planet for future generations"
+          subtitle="Growing responsibly to protect our planet for future generations"
         />
         
         <ContentSection title="Our Environmental Commitment">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Ethical Sourcing</h3>
+              <h3 className="text-xl font-light text-foreground">Responsible Sourcing</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We partner only with suppliers who share our commitment to ethical practices. Every gemstone and precious metal in our collection is sourced responsibly, with full transparency in our supply chain.
+                We partner only with nurseries who share our commitment to sustainable growing practices. No harmful pesticides, no excessive water usage — just healthy plants grown with care.
               </p>
             </div>
             <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Recycled Materials</h3>
+              <h3 className="text-xl font-light text-foreground">Eco Packaging</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Over 80% of our precious metals come from recycled sources, reducing the environmental impact of mining while maintaining the highest quality standards for our jewelry.
+                Over 90% of our packaging is made from recycled or compostable materials. We've eliminated single-use plastics and use biodegradable plant wrap to protect your plants during transit.
               </p>
             </div>
           </div>
@@ -41,11 +41,11 @@ const Sustainability = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <div className="text-3xl font-light text-primary mb-2">100%</div>
-                <p className="text-sm text-muted-foreground">Carbon neutral operations by 2025</p>
+                <p className="text-sm text-muted-foreground">Plastic-free shipping by 2025</p>
               </div>
               <div>
-                <div className="text-3xl font-light text-primary mb-2">90%</div>
-                <p className="text-sm text-muted-foreground">Recycled packaging materials</p>
+                <div className="text-3xl font-light text-primary mb-2">10K</div>
+                <p className="text-sm text-muted-foreground">Trees planted through partner programs</p>
               </div>
               <div>
                 <div className="text-3xl font-light text-primary mb-2">Zero</div>
@@ -55,23 +55,23 @@ const Sustainability = () => {
           </div>
         </ContentSection>
 
-        <ContentSection title="Circular Economy">
+        <ContentSection title="Plant Health Guarantee">
           <div className="space-y-8">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We believe in the power of circular design - creating jewelry that can be treasured, repaired, and eventually recycled into new pieces.
+              We stand behind every plant we sell. If your plant arrives damaged or doesn't thrive within 30 days, we'll replace it — no questions asked.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Lifetime Care</h3>
+                <h3 className="text-lg font-light text-foreground">30-Day Guarantee</h3>
                 <p className="text-muted-foreground">
-                  Every piece comes with our lifetime care promise, including professional cleaning, repairs, and resizing services.
+                  Every plant comes with our 30-day health guarantee. If it doesn't settle in, we'll send a replacement free of charge.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Take-Back Program</h3>
+                <h3 className="text-lg font-light text-foreground">Pot Return Program</h3>
                 <p className="text-muted-foreground">
-                  When you're ready for something new, we'll take back your LINEA jewelry to be recycled into future pieces.
+                  When you upgrade your plant's pot, send us the old one. We sanitize and reuse ceramic pots, reducing waste and giving them a second life.
                 </p>
               </div>
             </div>
@@ -81,21 +81,21 @@ const Sustainability = () => {
         <ContentSection title="Certifications & Partnerships">
           <div className="space-y-8">
             <p className="text-muted-foreground leading-relaxed">
-              Our commitment to sustainability is verified through partnerships with leading organizations and certifications that hold us accountable to the highest standards.
+              Our commitment to sustainability is verified through partnerships with leading environmental organizations.
             </p>
             
             <div className="grid md:grid-cols-4 gap-8 items-center">
               <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">RJC Certified</span>
+                <span className="text-xs text-muted-foreground">1% for the Planet</span>
               </div>
               <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
                 <span className="text-xs text-muted-foreground">B Corp</span>
               </div>
               <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">SCS Certified</span>
+                <span className="text-xs text-muted-foreground">FSC Certified</span>
               </div>
               <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">Fair Trade</span>
+                <span className="text-xs text-muted-foreground">Carbon Neutral</span>
               </div>
             </div>
           </div>

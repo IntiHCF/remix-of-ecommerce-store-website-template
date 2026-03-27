@@ -18,7 +18,7 @@ const OurStory = () => {
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
           <PageHeader 
             title="Our Story" 
-            subtitle="A journey of passion, craftsmanship, and timeless elegance"
+            subtitle="A journey of passion, sustainability, and bringing nature indoors"
           />
           
           <ContentSection>
@@ -26,7 +26,7 @@ const OurStory = () => {
               image="/founders.png"
               imageAlt="Company founders"
               title="Founded on Passion"
-              content="LINEA Jewelry was born from a shared vision of creating timeless pieces that transcend fleeting trends. Our founders, united by their passion for exceptional craftsmanship and sustainable practices, established the brand with a commitment to creating jewelry that tells a story - your story."
+              content="LINEA Plants was born from a shared vision of making quality indoor plants accessible to everyone. Our founders, united by their love of botany and interior design, established the brand with a commitment to sourcing the healthiest, most beautiful plants — and helping them thrive in your home or office."
               imagePosition="left"
             />
           </ContentSection>
@@ -34,15 +34,15 @@ const OurStory = () => {
           <ContentSection title="Our Heritage">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-xl font-light text-foreground">Traditional Craftsmanship</h3>
+                <h3 className="text-xl font-light text-foreground">Expert Curation</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Every piece in our collection is meticulously handcrafted by skilled artisans who have honed their craft over generations. We honor traditional techniques while embracing modern innovation, ensuring each piece meets our exacting standards for quality and beauty.
+                  Every plant in our collection is hand-selected from trusted nurseries who share our standards for quality. We work directly with growers to ensure each plant arrives healthy, vibrant, and ready to thrive in its new home.
                 </p>
               </div>
               <div className="space-y-6">
                 <h3 className="text-xl font-light text-foreground">Sustainable Future</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We believe luxury and sustainability can coexist beautifully. Our commitment to ethical sourcing, recycled materials, and responsible manufacturing practices ensures that every piece you wear contributes to a more sustainable future.
+                  We believe in responsible growing practices. Our commitment to sustainable packaging, local sourcing where possible, and plastic-free shipping ensures that every order contributes to a greener world.
                 </p>
               </div>
             </div>
@@ -51,21 +51,21 @@ const OurStory = () => {
           <ContentSection title="Our Values">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Excellence</h3>
+                <h3 className="text-lg font-light text-foreground">Quality</h3>
                 <p className="text-muted-foreground">
-                  We pursue perfection in every detail, from the initial design concept to the final polish.
+                  We pursue the healthiest specimens, from root system to leaf tip, ensuring every plant meets our exacting standards.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Authenticity</h3>
+                <h3 className="text-lg font-light text-foreground">Education</h3>
                 <p className="text-muted-foreground">
-                  Each piece reflects genuine craftsmanship and tells an authentic story of artistry and care.
+                  We empower plant parents with knowledge — detailed care guides, workshops, and responsive support.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Innovation</h3>
+                <h3 className="text-lg font-light text-foreground">Community</h3>
                 <p className="text-muted-foreground">
-                  We continuously evolve our designs and techniques while honoring timeless aesthetic principles.
+                  We're building a community of plant lovers who share tips, celebrate growth, and find joy in nurturing living things.
                 </p>
               </div>
             </div>

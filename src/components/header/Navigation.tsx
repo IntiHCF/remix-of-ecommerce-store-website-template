@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ShoppingBag from "./ShoppingBag";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
-import haloImage from "@/assets/halo.jpg";
+import monsteraImage from "@/assets/pantheon.jpg";
+import snakePlantImage from "@/assets/eclipse.jpg";
+import pothosImage from "@/assets/halo.jpg";
 
 interface CartItem {
   id: number;
@@ -24,31 +24,30 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isShoppingBagOpen, setIsShoppingBagOpen] = useState(false);
   
-  // Shopping bag state with 3 mock items
   const [cartItems, setCartItems] = useState<CartItem[]>([
     {
       id: 1,
-      name: "Pantheon",
-      price: "€2,850",
-      image: pantheonImage,
+      name: "Monstera Deliciosa",
+      price: "€45",
+      image: monsteraImage,
       quantity: 1,
-      category: "Earrings"
+      category: "Indoor Plants"
     },
     {
       id: 2,
-      name: "Eclipse",
-      price: "€3,200", 
-      image: eclipseImage,
+      name: "Snake Plant",
+      price: "€32", 
+      image: snakePlantImage,
       quantity: 1,
-      category: "Bracelets"
+      category: "Office Plants"
     },
     {
       id: 3,
-      name: "Halo",
-      price: "€1,950",
-      image: haloImage, 
+      name: "Golden Pothos",
+      price: "€24",
+      image: pothosImage, 
       quantity: 1,
-      category: "Earrings"
+      category: "Hanging Plants"
     }
   ]);
 
@@ -66,7 +65,6 @@ const Navigation = () => {
     }
   };
   
-  // Preload dropdown images for faster display
   useEffect(() => {
     const imagesToPreload = [
       "/rings-collection.png",
@@ -83,12 +81,12 @@ const Navigation = () => {
   }, []);
 
   const popularSearches = [
-    "Gold Rings",
-    "Silver Necklaces", 
-    "Pearl Earrings",
-    "Designer Bracelets",
-    "Wedding Rings",
-    "Vintage Collection"
+    "Monstera",
+    "Snake Plant", 
+    "Succulents",
+    "Hanging Plants",
+    "Office Plants",
+    "Low Light Plants"
   ];
   
   const navItems = [
@@ -96,15 +94,15 @@ const Navigation = () => {
       name: "Shop", 
       href: "/category/shop",
       submenuItems: [
-        "Rings",
-        "Necklaces", 
-        "Earrings",
-        "Bracelets",
-        "Watches"
+        "Indoor Plants",
+        "Office Plants", 
+        "Succulents",
+        "Hanging Plants",
+        "Plant Accessories"
       ],
       images: [
-        { src: "/rings-collection.png", alt: "Rings Collection", label: "Rings" },
-        { src: "/earrings-collection.png", alt: "Earrings Collection", label: "Earrings" }
+        { src: "/rings-collection.png", alt: "Hanging Plants Collection", label: "Hanging Plants" },
+        { src: "/earrings-collection.png", alt: "Succulents Collection", label: "Succulents" }
       ]
     },
     { 
@@ -113,13 +111,13 @@ const Navigation = () => {
       submenuItems: [
         "This Week's Arrivals",
         "Spring Collection",
-        "Featured Designers",
+        "Rare Plants",
         "Limited Edition",
         "Pre-Orders"
       ],
       images: [
-        { src: "/arcus-bracelet.png", alt: "Arcus Bracelet", label: "Arcus Bracelet" },
-        { src: "/span-bracelet.png", alt: "Span Bracelet", label: "Span Bracelet" }
+        { src: "/arcus-bracelet.png", alt: "Monstera Deliciosa", label: "Monstera Deliciosa" },
+        { src: "/span-bracelet.png", alt: "Snake Plant", label: "Snake Plant" }
       ]
     },
     { 
@@ -128,12 +126,12 @@ const Navigation = () => {
       submenuItems: [
         "Our Story",
         "Sustainability",
-        "Size Guide",
+        "Plant Care Guide",
         "Customer Care",
         "Store Locator"
       ],
       images: [
-        { src: "/founders.png", alt: "Company Founders", label: "Read our story" }
+        { src: "/founders.png", alt: "Our Founders", label: "Read our story" }
       ]
     }
   ];
@@ -166,7 +164,7 @@ const Navigation = () => {
           </div>
         </button>
 
-        {/* Left navigation - Hidden on tablets and mobile */}
+        {/* Left navigation */}
         <div className="hidden lg:flex space-x-8">
           {navItems.map((item) => (
             <div
@@ -242,7 +240,6 @@ const Navigation = () => {
         >
           <div className="px-6 py-8">
             <div className="flex justify-between w-full">
-              {/* Left side - Menu items */}
               <div className="flex-1">
                 <ul className="space-y-2">
                    {navItems
@@ -250,7 +247,7 @@ const Navigation = () => {
                      ?.submenuItems.map((subItem, index) => (
                       <li key={index}>
                         <Link 
-                          to={activeDropdown === "About" ? `/about/${subItem.toLowerCase().replace(/\s+/g, '-')}` : `/category/${subItem.toLowerCase()}`}
+                          to={activeDropdown === "About" ? `/about/${subItem.toLowerCase().replace(/\s+/g, '-')}` : `/category/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
                           className="text-nav-foreground hover:text-nav-hover transition-colors duration-200 text-sm font-light block py-2"
                         >
                           {subItem}
@@ -260,19 +257,17 @@ const Navigation = () => {
                 </ul>
               </div>
 
-              {/* Right side - Images */}
               <div className="flex space-x-6">
                 {navItems
                   .find(item => item.name === activeDropdown)
                   ?.images.map((image, index) => {
-                    // Determine the link destination based on dropdown and image
                     let linkTo = "/";
                     if (activeDropdown === "Shop") {
-                      if (image.label === "Rings") linkTo = "/category/rings";
-                      else if (image.label === "Earrings") linkTo = "/category/earrings";
+                      if (image.label === "Hanging Plants") linkTo = "/category/hanging-plants";
+                      else if (image.label === "Succulents") linkTo = "/category/succulents";
                     } else if (activeDropdown === "New in") {
-                      if (image.label === "Arcus Bracelet") linkTo = "/product/arcus-bracelet";
-                      else if (image.label === "Span Bracelet") linkTo = "/product/span-bracelet";
+                      if (image.label === "Monstera Deliciosa") linkTo = "/product/1";
+                      else if (image.label === "Snake Plant") linkTo = "/product/2";
                     } else if (activeDropdown === "About") {
                       linkTo = "/about/our-story";
                     }
@@ -306,7 +301,6 @@ const Navigation = () => {
         >
           <div className="px-6 py-8">
             <div className="max-w-2xl mx-auto">
-              {/* Search input */}
               <div className="relative mb-8">
                 <div className="flex items-center border-b border-border pb-2">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-nav-foreground mr-3">
@@ -314,14 +308,13 @@ const Navigation = () => {
                   </svg>
                   <input
                     type="text"
-                    placeholder="Search for jewelry..."
+                    placeholder="Search for plants..."
                     className="flex-1 bg-transparent text-nav-foreground placeholder:text-nav-foreground/60 outline-none text-lg"
                     autoFocus
                   />
                 </div>
               </div>
 
-              {/* Popular searches */}
               <div>
                 <h3 className="text-nav-foreground text-sm font-light mb-4">Popular Searches</h3>
                 <div className="flex flex-wrap gap-3">
@@ -358,7 +351,7 @@ const Navigation = () => {
                      {item.submenuItems.map((subItem, subIndex) => (
                        <Link
                          key={subIndex}
-                         to={item.name === "About" ? `/about/${subItem.toLowerCase().replace(/\s+/g, '-')}` : `/category/${subItem.toLowerCase()}`}
+                         to={item.name === "About" ? `/about/${subItem.toLowerCase().replace(/\s+/g, '-')}` : `/category/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
                          className="text-nav-foreground/70 hover:text-nav-hover text-sm font-light block py-1"
                          onClick={() => setIsMobileMenuOpen(false)}
                        >
@@ -388,15 +381,12 @@ const Navigation = () => {
       {/* Favorites Off-canvas overlay */}
       {offCanvasType === 'favorites' && (
         <div className="fixed inset-0 z-50 h-screen">
-          {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black/50 h-screen"
             onClick={() => setOffCanvasType(null)}
           />
           
-          {/* Off-canvas panel */}
           <div className="absolute right-0 top-0 h-screen w-96 bg-background border-l border-border animate-slide-in-right flex flex-col">
-            {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-border">
               <h2 className="text-lg font-light text-foreground">Your Favorites</h2>
               <button
@@ -408,10 +398,9 @@ const Navigation = () => {
               </button>
             </div>
             
-            {/* Content */}
             <div className="p-6">
               <p className="text-muted-foreground text-sm mb-6">
-                You haven't added any favorites yet. Browse our collection and click the heart icon to save items you love.
+                You haven't added any favorites yet. Browse our collection and click the heart icon to save plants you love.
               </p>
             </div>
           </div>

@@ -36,12 +36,12 @@ const ProductDetail = () => {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/category/earrings">Earrings</Link>
+                    <Link to="/category/indoor-plants">Indoor Plants</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Pantheon</BreadcrumbPage>
+                  <BreadcrumbPage>Monstera Deliciosa</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -66,7 +66,7 @@ const ProductDetail = () => {
         
         <section className="w-full">
           <div className="mb-4 px-6">
-            <h2 className="text-sm font-light text-foreground">Our other Earrings</h2>
+            <h2 className="text-sm font-light text-foreground">More Indoor Plants</h2>
           </div>
           <ProductCarousel />
         </section>

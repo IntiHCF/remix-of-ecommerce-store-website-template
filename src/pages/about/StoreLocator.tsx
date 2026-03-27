@@ -9,25 +9,25 @@ import AboutSidebar from "../../components/about/AboutSidebar";
 const StoreLocator = () => {
   const stores = [
     {
-      name: "LINEA Madison Avenue",
+      name: "LINEA Greenhouse — Manhattan",
       address: "789 Madison Avenue, New York, NY 10065",
       phone: "+1 (212) 555-0123",
       hours: "Mon-Sat: 10AM-8PM, Sun: 12PM-6PM",
-      services: ["Personal Shopping", "Custom Design", "Repairs", "Appraisals"]
+      services: ["Plant Styling Consult", "Repotting Service", "Plant Health Check", "Workshops"]
     },
     {
-      name: "LINEA Beverly Hills",
-      address: "456 Rodeo Drive, Beverly Hills, CA 90210",
-      phone: "+1 (310) 555-0456",
+      name: "LINEA Garden Studio — Brooklyn",
+      address: "456 Atlantic Avenue, Brooklyn, NY 11217",
+      phone: "+1 (718) 555-0456",
       hours: "Mon-Sat: 10AM-8PM, Sun: 12PM-6PM",
-      services: ["Personal Shopping", "Custom Design", "VIP Suites", "Repairs"]
+      services: ["Plant Styling Consult", "Terrarium Bar", "Workshops", "Gift Wrapping"]
     },
     {
-      name: "LINEA SoHo",
+      name: "LINEA Pop-Up — SoHo",
       address: "123 Spring Street, New York, NY 10012",
       phone: "+1 (212) 555-0789",
       hours: "Mon-Sat: 11AM-8PM, Sun: 12PM-7PM",
-      services: ["Browse & Buy", "Repairs", "Gift Wrapping"]
+      services: ["Browse & Buy", "Gift Sets", "Plant Care Advice"]
     }
   ];
 
@@ -43,7 +43,7 @@ const StoreLocator = () => {
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
         <PageHeader 
           title="Store Locator" 
-          subtitle="Visit us in person for a personalized jewelry experience"
+          subtitle="Visit us in person and explore our plant collection"
         />
         
         <ContentSection title="Interactive Store Map">
@@ -68,7 +68,7 @@ const StoreLocator = () => {
                         Get Directions
                       </Button>
                       <Button className="rounded-none">
-                        Book Appointment
+                        Book a Visit
                       </Button>
                     </div>
                   </div>
@@ -90,47 +90,47 @@ const StoreLocator = () => {
           </div>
         </ContentSection>
 
-        <ContentSection title="Private Appointments">
+        <ContentSection title="Plant Styling Consultations">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Experience personalized service with a private appointment. Our jewelry consultants will guide you through our collections, help with custom designs, and provide expert advice in a comfortable, private setting.
+              Book a one-on-one session with our plant stylists. They'll help you choose the perfect plants for your space, considering light conditions, room size, and your lifestyle.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="space-y-3">
-                <h4 className="text-lg font-light text-foreground">Personal Shopping</h4>
+                <h4 className="text-lg font-light text-foreground">Home Styling</h4>
                 <p className="text-muted-foreground text-sm">
-                  One-on-one guidance to find the perfect piece for any occasion
+                  Personalized plant recommendations for every room in your home
                 </p>
               </div>
               <div className="space-y-3">
-                <h4 className="text-lg font-light text-foreground">Custom Design</h4>
+                <h4 className="text-lg font-light text-foreground">Office Greening</h4>
                 <p className="text-muted-foreground text-sm">
-                  Work with our designers to create a unique piece just for you
+                  Transform your workspace with curated plant installations
                 </p>
               </div>
               <div className="space-y-3">
-                <h4 className="text-lg font-light text-foreground">Expert Services</h4>
+                <h4 className="text-lg font-light text-foreground">Workshops</h4>
                 <p className="text-muted-foreground text-sm">
-                  Professional appraisals, repairs, and maintenance services
+                  Learn propagation, repotting, and seasonal care in our hands-on classes
                 </p>
               </div>
             </div>
             
             <div className="pt-8">
               <Button size="lg" className="rounded-none">
-                Schedule Your Appointment
+                Book Your Consultation
               </Button>
             </div>
           </div>
         </ContentSection>
 
-        <ContentSection title="Virtual Consultations">
+        <ContentSection title="Virtual Plant Advice">
           <div className="bg-muted/10 rounded-lg p-8">
             <h3 className="text-xl font-light text-foreground mb-4">Can't visit in person?</h3>
             <p className="text-muted-foreground mb-6">
-              Book a virtual consultation with one of our jewelry experts. We'll showcase pieces via video call, 
-              answer your questions, and help you make the perfect selection from the comfort of your home.
+              Book a virtual consultation with one of our plant experts. We'll assess your space via video call, 
+              recommend the perfect plants, and answer all your care questions from the comfort of your home.
             </p>
             <Button variant="outline" className="rounded-none">
               Book Virtual Consultation
