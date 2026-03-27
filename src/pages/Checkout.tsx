@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
-import monsteraImage from "@/assets/pantheon.jpg";
-import snakePlantImage from "@/assets/eclipse.jpg";
+import pikachuImage from "@/assets/pantheon.jpg";
+import charizardImage from "@/assets/eclipse.jpg";
 
 const Checkout = () => {
   const [showDiscountInput, setShowDiscountInput] = useState(false);
@@ -49,18 +49,18 @@ const Checkout = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Monstera Deliciosa",
-      price: "€45",
+      name: "Pikachu",
+      price: "€120",
       quantity: 1,
-      image: monsteraImage,
-      size: "17cm pot"
+      image: pikachuImage,
+      size: "Level 12"
     },
     {
       id: 2,
-      name: "Snake Plant", 
-      price: "€32",
+      name: "Charizard", 
+      price: "€350",
       quantity: 1,
-      image: snakePlantImage
+      image: charizardImage
     }
   ]);
 

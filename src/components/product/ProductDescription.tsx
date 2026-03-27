@@ -4,17 +4,8 @@ import { Button } from "@/components/ui/button";
 import ReviewProduct from "./ReviewProduct";
 
 const CustomStar = ({ filled, className }: { filled: boolean; className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 20 20" 
-    fill="currentColor" 
-    className={`w-3 h-3 ${filled ? 'text-foreground' : 'text-muted-foreground/30'} ${className}`}
-  >
-    <path 
-      fillRule="evenodd" 
-      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" 
-      clipRule="evenodd" 
-    />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={`w-3 h-3 ${filled ? 'text-foreground' : 'text-muted-foreground/30'} ${className}`}>
+    <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clipRule="evenodd" />
   </svg>
 );
 
@@ -26,174 +17,97 @@ const ProductDescription = () => {
 
   return (
     <div className="space-y-0 mt-8 border-t border-border">
-      {/* Description */}
       <div className="border-b border-border">
-        <Button
-          variant="ghost"
-          onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
-          className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
-        >
+        <Button variant="ghost" onClick={() => setIsDescriptionOpen(!isDescriptionOpen)} className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none">
           <span>Description</span>
-          {isDescriptionOpen ? (
-            <ChevronUp className="h-4 w-4" />
-          ) : (
-            <ChevronDown className="h-4 w-4" />
-          )}
+          {isDescriptionOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </Button>
         {isDescriptionOpen && (
           <div className="pb-6 space-y-4">
             <p className="text-sm font-light text-muted-foreground leading-relaxed">
-              The Monstera Deliciosa, also known as the Swiss Cheese Plant, is one of the most 
-              iconic houseplants. Its large, glossy leaves with natural perforations make it a 
-              stunning focal point in any room.
+              Pikachu is an Electric-type Pokémon known for its cute appearance and powerful electric attacks. 
+              It stores electricity in the electric sacs on its cheeks and releases charges through its tail, 
+              which acts as a grounding rod.
             </p>
             <p className="text-sm font-light text-muted-foreground leading-relaxed">
-              Each plant is carefully selected from our nursery partners and shipped in a premium 
-              ceramic pot. Monsteras are known for their vigorous growth and can develop impressive 
-              fenestrations as they mature.
+              This Pikachu has been raised with care in our breeding program and is well-socialized with humans. 
+              It comes with a starter kit including Pokémon food, a Poké Ball, and a care manual. 
+              Perfect as a first Pokémon or a powerful addition to an experienced trainer's team.
             </p>
           </div>
         )}
       </div>
 
-      {/* Product Details */}
       <div className="border-b border-border">
-        <Button
-          variant="ghost"
-          onClick={() => setIsDetailsOpen(!isDetailsOpen)}
-          className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
-        >
-          <span>Plant Details</span>
-          {isDetailsOpen ? (
-            <ChevronUp className="h-4 w-4" />
-          ) : (
-            <ChevronDown className="h-4 w-4" />
-          )}
+        <Button variant="ghost" onClick={() => setIsDetailsOpen(!isDetailsOpen)} className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none">
+          <span>Pokémon Details</span>
+          {isDetailsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </Button>
         {isDetailsOpen && (
           <div className="pb-6 space-y-3">
-            <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">SKU</span>
-              <span className="text-sm font-light text-foreground">LP-MON-001</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Botanical Name</span>
-              <span className="text-sm font-light text-foreground">Monstera deliciosa</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Difficulty</span>
-              <span className="text-sm font-light text-foreground">Easy to moderate</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Pet Friendly</span>
-              <span className="text-sm font-light text-foreground">No — toxic to pets</span>
-            </div>
+            <div className="flex justify-between"><span className="text-sm font-light text-muted-foreground">Pokédex No.</span><span className="text-sm font-light text-foreground">#025</span></div>
+            <div className="flex justify-between"><span className="text-sm font-light text-muted-foreground">Category</span><span className="text-sm font-light text-foreground">Mouse Pokémon</span></div>
+            <div className="flex justify-between"><span className="text-sm font-light text-muted-foreground">Abilities</span><span className="text-sm font-light text-foreground">Static / Lightning Rod</span></div>
+            <div className="flex justify-between"><span className="text-sm font-light text-muted-foreground">Evolution</span><span className="text-sm font-light text-foreground">Pichu → Pikachu → Raichu</span></div>
           </div>
         )}
       </div>
 
-      {/* Care Instructions */}
       <div className="border-b border-border">
-        <Button
-          variant="ghost"
-          onClick={() => setIsCareOpen(!isCareOpen)}
-          className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
-        >
-          <span>Care Instructions</span>
-          {isCareOpen ? (
-            <ChevronUp className="h-4 w-4" />
-          ) : (
-            <ChevronDown className="h-4 w-4" />
-          )}
+        <Button variant="ghost" onClick={() => setIsCareOpen(!isCareOpen)} className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none">
+          <span>Care & Training</span>
+          {isCareOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </Button>
         {isCareOpen && (
           <div className="pb-6 space-y-4">
             <ul className="space-y-2">
-              <li className="text-sm font-light text-muted-foreground">• Water when the top 2–3cm of soil feels dry</li>
-              <li className="text-sm font-light text-muted-foreground">• Place in bright, indirect light — avoid direct sun</li>
-              <li className="text-sm font-light text-muted-foreground">• Mist leaves regularly or use a humidifier</li>
-              <li className="text-sm font-light text-muted-foreground">• Feed with liquid fertilizer monthly during spring/summer</li>
+              <li className="text-sm font-light text-muted-foreground">• Feed 2-3 times daily with high-quality Pokémon food</li>
+              <li className="text-sm font-light text-muted-foreground">• Provide regular exercise and battle training sessions</li>
+              <li className="text-sm font-light text-muted-foreground">• Keep away from water-type environments to avoid discomfort</li>
+              <li className="text-sm font-light text-muted-foreground">• Regular visits to the Pokémon Center for health checkups</li>
             </ul>
             <p className="text-sm font-light text-muted-foreground">
-              For detailed plant care advice, visit our Plant Care Guide or contact our plant specialists.
+              For advanced training tips, consult our Trainer Guide or contact our Pokémon Care specialists.
             </p>
           </div>
         )}
       </div>
 
-      {/* Customer Reviews */}
       <div className="border-b border-border lg:mb-16">
-        <Button
-          variant="ghost"
-          onClick={() => setIsReviewsOpen(!isReviewsOpen)}
-          className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
-        >
+        <Button variant="ghost" onClick={() => setIsReviewsOpen(!isReviewsOpen)} className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none">
           <div className="flex items-center gap-3">
-            <span>Customer Reviews</span>
+            <span>Trainer Reviews</span>
             <div className="flex items-center">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <CustomStar
-                  key={star}
-                  filled={star <= 4.8}
-                />
-              ))}
+              {[1, 2, 3, 4, 5].map((star) => <CustomStar key={star} filled={star <= 4.8} />)}
               <span className="text-sm font-light text-muted-foreground ml-1">4.8</span>
             </div>
           </div>
-          {isReviewsOpen ? (
-            <ChevronUp className="h-4 w-4" />
-          ) : (
-            <ChevronDown className="h-4 w-4" />
-          )}
+          {isReviewsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </Button>
         {isReviewsOpen && (
           <div className="pb-6 space-y-6">
             <ReviewProduct />
-
             <div className="space-y-6">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar key={star} filled={true} />
-                    ))}
-                  </div>
-                  <span className="text-sm font-light text-muted-foreground">Sarah M.</span>
+                  <div className="flex items-center">{[1,2,3,4,5].map((star) => <CustomStar key={star} filled={true} />)}</div>
+                  <span className="text-sm font-light text-muted-foreground">Ash K.</span>
                 </div>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "Arrived in perfect condition! The plant is even more beautiful in person. 
-                  It's already putting out new leaves after just two weeks. The ceramic pot is lovely too."
-                </p>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed">"Best partner I've ever had! Pikachu and I have been through countless battles together. Its Thunderbolt is incredible and it's the most loyal companion you could ask for."</p>
               </div>
-
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar key={star} filled={star <= 4} />
-                    ))}
-                  </div>
-                  <span className="text-sm font-light text-muted-foreground">Emma T.</span>
+                  <div className="flex items-center">{[1,2,3,4,5].map((star) => <CustomStar key={star} filled={star <= 4} />)}</div>
+                  <span className="text-sm font-light text-muted-foreground">Misty W.</span>
                 </div>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "Great plant, well packaged for shipping. It's thriving in my living room corner. 
-                  Would have loved a care card included but the online guide is helpful."
-                </p>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed">"Arrived healthy and full of energy! It took a few days to warm up but now it's inseparable from me. The starter kit was a nice touch. Would definitely buy from LINEA again."</p>
               </div>
-
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar key={star} filled={true} />
-                    ))}
-                  </div>
-                  <span className="text-sm font-light text-muted-foreground">Jessica R.</span>
+                  <div className="flex items-center">{[1,2,3,4,5].map((star) => <CustomStar key={star} filled={true} />)}</div>
+                  <span className="text-sm font-light text-muted-foreground">Brock H.</span>
                 </div>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "This is my third order from LINEA and they never disappoint. The Monstera is 
-                  lush and healthy. My office looks like a jungle now and I love it!"
-                </p>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed">"As a Pokémon breeder, I can tell this Pikachu was raised with exceptional care. Healthy coat, great temperament, and already knows Thunder Shock. Five stars!"</p>
               </div>
             </div>
           </div>

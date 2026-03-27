@@ -5,14 +5,14 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import monsteraImage from "@/assets/pantheon.jpg";
-import snakePlantImage from "@/assets/eclipse.jpg";
-import pothosImage from "@/assets/halo.jpg";
-import fiddleLeafImage from "@/assets/oblique.jpg";
-import peaceLilyImage from "@/assets/lintel.jpg";
-import zzPlantImage from "@/assets/shadowline.jpg";
-import hangingPlantImage from "@/assets/organic-earring.png";
-import officePlantImage from "@/assets/link-bracelet.png";
+import pikachuImage from "@/assets/pantheon.jpg";
+import charizardImage from "@/assets/eclipse.jpg";
+import bulbasaurImage from "@/assets/halo.jpg";
+import squirtleImage from "@/assets/oblique.jpg";
+import gengarImage from "@/assets/lintel.jpg";
+import eeveeImage from "@/assets/shadowline.jpg";
+import electricCollection from "@/assets/organic-earring.png";
+import waterCollection from "@/assets/link-bracelet.png";
 
 interface Product {
   id: number;
@@ -25,45 +25,45 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "Monstera Deliciosa",
-    category: "Indoor Plants",
-    price: "€45",
-    image: monsteraImage,
+    name: "Pikachu",
+    category: "Electric",
+    price: "€120",
+    image: pikachuImage,
   },
   {
     id: 2,
-    name: "Snake Plant",
-    category: "Office Plants",
-    price: "€32",
-    image: snakePlantImage,
+    name: "Charizard",
+    category: "Fire",
+    price: "€350",
+    image: charizardImage,
   },
   {
     id: 3,
-    name: "Golden Pothos",
-    category: "Hanging Plants",
-    price: "€24",
-    image: pothosImage,
+    name: "Bulbasaur",
+    category: "Grass",
+    price: "€95",
+    image: bulbasaurImage,
   },
   {
     id: 4,
-    name: "Fiddle Leaf Fig",
-    category: "Indoor Plants",
-    price: "€65",
-    image: fiddleLeafImage,
+    name: "Squirtle",
+    category: "Water",
+    price: "€95",
+    image: squirtleImage,
   },
   {
     id: 5,
-    name: "Peace Lily",
-    category: "Indoor Plants",
-    price: "€28",
-    image: peaceLilyImage,
+    name: "Gengar",
+    category: "Ghost",
+    price: "€180",
+    image: gengarImage,
   },
   {
     id: 6,
-    name: "ZZ Plant",
-    category: "Office Plants",
-    price: "€38",
-    image: zzPlantImage,
+    name: "Eevee",
+    category: "Normal",
+    price: "€150",
+    image: eeveeImage,
   },
 ];
 
@@ -93,8 +93,8 @@ const ProductCarousel = () => {
                           className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
                         />
                         <img
-                          src={product.category === "Hanging Plants" ? hangingPlantImage : officePlantImage}
-                          alt={`${product.name} in context`}
+                          src={product.category === "Electric" ? electricCollection : waterCollection}
+                          alt={`${product.name} in battle`}
                           className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 group-hover:opacity-100"
                         />
                         <div className="absolute inset-0 bg-black/[0.03]"></div>

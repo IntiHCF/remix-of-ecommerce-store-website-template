@@ -8,101 +8,47 @@ const Sustainability = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       <div className="flex">
-        <div className="hidden lg:block">
-          <AboutSidebar />
-        </div>
-        
+        <div className="hidden lg:block"><AboutSidebar /></div>
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
-        <PageHeader 
-          title="Sustainability" 
-          subtitle="Growing responsibly to protect our planet for future generations"
-        />
-        
-        <ContentSection title="Our Environmental Commitment">
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Responsible Sourcing</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We partner only with nurseries who share our commitment to sustainable growing practices. No harmful pesticides, no excessive water usage — just healthy plants grown with care.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <h3 className="text-xl font-light text-foreground">Eco Packaging</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Over 90% of our packaging is made from recycled or compostable materials. We've eliminated single-use plastics and use biodegradable plant wrap to protect your plants during transit.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-muted/10 rounded-lg p-8">
-            <h3 className="text-2xl font-light text-foreground mb-6">Our Impact Goals</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-light text-primary mb-2">100%</div>
-                <p className="text-sm text-muted-foreground">Plastic-free shipping by 2025</p>
+          <PageHeader title="Pokémon Care" subtitle="Ensuring every Pokémon lives a healthy, happy life with their trainer" />
+          <ContentSection title="Our Care Standards">
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <div className="space-y-6">
+                <h3 className="text-xl font-light text-foreground">Health Checks</h3>
+                <p className="text-muted-foreground leading-relaxed">Every Pokémon undergoes a full health assessment at a certified Pokémon Center before adoption. We check stats, temperament, and overall wellbeing to ensure they're ready for their new home.</p>
               </div>
-              <div>
-                <div className="text-3xl font-light text-primary mb-2">10K</div>
-                <p className="text-sm text-muted-foreground">Trees planted through partner programs</p>
-              </div>
-              <div>
-                <div className="text-3xl font-light text-primary mb-2">Zero</div>
-                <p className="text-sm text-muted-foreground">Waste to landfill policy</p>
+              <div className="space-y-6">
+                <h3 className="text-xl font-light text-foreground">Ethical Breeding</h3>
+                <p className="text-muted-foreground leading-relaxed">We work only with licensed breeders who follow Pokémon League guidelines. No forced evolution, no overbreeding — just happy, naturally raised Pokémon.</p>
               </div>
             </div>
-          </div>
-        </ContentSection>
-
-        <ContentSection title="Plant Health Guarantee">
-          <div className="space-y-8">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We stand behind every plant we sell. If your plant arrives damaged or doesn't thrive within 30 days, we'll replace it — no questions asked.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">30-Day Guarantee</h3>
-                <p className="text-muted-foreground">
-                  Every plant comes with our 30-day health guarantee. If it doesn't settle in, we'll send a replacement free of charge.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Pot Return Program</h3>
-                <p className="text-muted-foreground">
-                  When you upgrade your plant's pot, send us the old one. We sanitize and reuse ceramic pots, reducing waste and giving them a second life.
-                </p>
+            <div className="bg-muted/10 rounded-lg p-8">
+              <h3 className="text-2xl font-light text-foreground mb-6">Our Commitment</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div><div className="text-3xl font-light text-primary mb-2">100%</div><p className="text-sm text-muted-foreground">Pokémon Center certified health checks</p></div>
+                <div><div className="text-3xl font-light text-primary mb-2">5,000+</div><p className="text-sm text-muted-foreground">Happy adoptions completed</p></div>
+                <div><div className="text-3xl font-light text-primary mb-2">Zero</div><p className="text-sm text-muted-foreground">Tolerance for Pokémon mistreatment</p></div>
               </div>
             </div>
-          </div>
-        </ContentSection>
-
-        <ContentSection title="Certifications & Partnerships">
-          <div className="space-y-8">
-            <p className="text-muted-foreground leading-relaxed">
-              Our commitment to sustainability is verified through partnerships with leading environmental organizations.
-            </p>
-            
-            <div className="grid md:grid-cols-4 gap-8 items-center">
-              <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">1% for the Planet</span>
-              </div>
-              <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">B Corp</span>
-              </div>
-              <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">FSC Certified</span>
-              </div>
-              <div className="h-16 w-32 bg-muted/10 rounded-lg flex items-center justify-center">
-                <span className="text-xs text-muted-foreground">Carbon Neutral</span>
+          </ContentSection>
+          <ContentSection title="Lifetime Support">
+            <div className="space-y-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">When you adopt from LINEA, you gain a lifetime partner — and lifetime support from our team.</p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-light text-foreground">30-Day Guarantee</h3>
+                  <p className="text-muted-foreground">If your Pokémon isn't settling in, our specialists will provide free behavioral consultations and training advice.</p>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-light text-foreground">Rehoming Support</h3>
+                  <p className="text-muted-foreground">If circumstances change, we'll help rehome your Pokémon to a loving trainer — no judgment, just care.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </ContentSection>
+          </ContentSection>
         </main>
       </div>
-      
       <Footer />
     </div>
   );

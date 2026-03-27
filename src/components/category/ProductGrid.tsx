@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
-import monsteraImage from "@/assets/pantheon.jpg";
-import snakePlantImage from "@/assets/eclipse.jpg";
-import pothosImage from "@/assets/halo.jpg";
-import fiddleLeafImage from "@/assets/oblique.jpg";
-import peaceLilyImage from "@/assets/lintel.jpg";
-import zzPlantImage from "@/assets/shadowline.jpg";
-import hangingPlantImage from "@/assets/organic-earring.png";
-import officePlantImage from "@/assets/link-bracelet.png";
+import pikachuImage from "@/assets/pantheon.jpg";
+import charizardImage from "@/assets/eclipse.jpg";
+import bulbasaurImage from "@/assets/halo.jpg";
+import squirtleImage from "@/assets/oblique.jpg";
+import gengarImage from "@/assets/lintel.jpg";
+import eeveeImage from "@/assets/shadowline.jpg";
+import electricCollection from "@/assets/organic-earring.png";
+import waterCollection from "@/assets/link-bracelet.png";
 
 interface Product {
   id: number;
@@ -20,30 +20,30 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: "Monstera Deliciosa", category: "Indoor Plants", price: "€45", image: monsteraImage, isNew: true },
-  { id: 2, name: "Snake Plant", category: "Office Plants", price: "€32", image: snakePlantImage },
-  { id: 3, name: "Golden Pothos", category: "Hanging Plants", price: "€24", image: pothosImage, isNew: true },
-  { id: 4, name: "Fiddle Leaf Fig", category: "Indoor Plants", price: "€65", image: fiddleLeafImage },
-  { id: 5, name: "Peace Lily", category: "Indoor Plants", price: "€28", image: peaceLilyImage },
-  { id: 6, name: "ZZ Plant", category: "Office Plants", price: "€38", image: zzPlantImage },
-  { id: 7, name: "Rubber Plant", category: "Indoor Plants", price: "€42", image: monsteraImage },
-  { id: 8, name: "Calathea Orbifolia", category: "Indoor Plants", price: "€35", image: snakePlantImage },
-  { id: 9, name: "String of Hearts", category: "Hanging Plants", price: "€22", image: pothosImage },
-  { id: 10, name: "Bird of Paradise", category: "Indoor Plants", price: "€85", image: fiddleLeafImage },
-  { id: 11, name: "Boston Fern", category: "Hanging Plants", price: "€26", image: peaceLilyImage },
-  { id: 12, name: "Philodendron", category: "Office Plants", price: "€30", image: zzPlantImage },
-  { id: 13, name: "Aloe Vera", category: "Succulents", price: "€18", image: monsteraImage },
-  { id: 14, name: "Dracaena", category: "Office Plants", price: "€48", image: snakePlantImage },
-  { id: 15, name: "Spider Plant", category: "Hanging Plants", price: "€20", image: pothosImage },
-  { id: 16, name: "Chinese Evergreen", category: "Indoor Plants", price: "€34", image: fiddleLeafImage },
-  { id: 17, name: "Jade Plant", category: "Succulents", price: "€22", image: peaceLilyImage },
-  { id: 18, name: "Parlor Palm", category: "Office Plants", price: "€36", image: zzPlantImage },
-  { id: 19, name: "Echeveria Set", category: "Succulents", price: "€28", image: monsteraImage },
-  { id: 20, name: "Areca Palm", category: "Indoor Plants", price: "€55", image: snakePlantImage },
-  { id: 21, name: "English Ivy", category: "Hanging Plants", price: "€19", image: pothosImage },
-  { id: 22, name: "Croton", category: "Indoor Plants", price: "€32", image: fiddleLeafImage },
-  { id: 23, name: "Haworthia", category: "Succulents", price: "€16", image: peaceLilyImage },
-  { id: 24, name: "Kentia Palm", category: "Office Plants", price: "€72", image: zzPlantImage },
+  { id: 1, name: "Pikachu", category: "Electric", price: "€120", image: pikachuImage, isNew: true },
+  { id: 2, name: "Charizard", category: "Fire", price: "€350", image: charizardImage },
+  { id: 3, name: "Bulbasaur", category: "Grass", price: "€95", image: bulbasaurImage, isNew: true },
+  { id: 4, name: "Squirtle", category: "Water", price: "€95", image: squirtleImage },
+  { id: 5, name: "Gengar", category: "Ghost", price: "€180", image: gengarImage },
+  { id: 6, name: "Eevee", category: "Normal", price: "€150", image: eeveeImage },
+  { id: 7, name: "Jigglypuff", category: "Fairy", price: "€85", image: pikachuImage },
+  { id: 8, name: "Snorlax", category: "Normal", price: "€220", image: charizardImage },
+  { id: 9, name: "Mewtwo", category: "Psychic", price: "€500", image: bulbasaurImage },
+  { id: 10, name: "Dragonite", category: "Dragon", price: "€380", image: squirtleImage },
+  { id: 11, name: "Gyarados", category: "Water", price: "€280", image: gengarImage },
+  { id: 12, name: "Arcanine", category: "Fire", price: "€240", image: eeveeImage },
+  { id: 13, name: "Alakazam", category: "Psychic", price: "€210", image: pikachuImage },
+  { id: 14, name: "Machamp", category: "Fighting", price: "€195", image: charizardImage },
+  { id: 15, name: "Lapras", category: "Water", price: "€260", image: bulbasaurImage },
+  { id: 16, name: "Vaporeon", category: "Water", price: "€175", image: squirtleImage },
+  { id: 17, name: "Flareon", category: "Fire", price: "€175", image: gengarImage },
+  { id: 18, name: "Jolteon", category: "Electric", price: "€175", image: eeveeImage },
+  { id: 19, name: "Espeon", category: "Psychic", price: "€185", image: pikachuImage },
+  { id: 20, name: "Umbreon", category: "Dark", price: "€185", image: charizardImage },
+  { id: 21, name: "Lucario", category: "Fighting", price: "€230", image: bulbasaurImage },
+  { id: 22, name: "Garchomp", category: "Dragon", price: "€340", image: squirtleImage },
+  { id: 23, name: "Mimikyu", category: "Ghost", price: "€160", image: gengarImage },
+  { id: 24, name: "Sylveon", category: "Fairy", price: "€185", image: eeveeImage },
 ];
 
 const ProductGrid = () => {
@@ -63,8 +63,8 @@ const ProductGrid = () => {
                       className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
                     />
                     <img
-                      src={product.category === "Hanging Plants" ? hangingPlantImage : officePlantImage}
-                      alt={`${product.name} in context`}
+                      src={product.category === "Electric" ? electricCollection : waterCollection}
+                      alt={`${product.name} in battle`}
                       className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 bg-black/[0.03]"></div>
