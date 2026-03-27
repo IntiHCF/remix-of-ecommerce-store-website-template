@@ -6,16 +6,16 @@ const LargeHero = () => {
       <div className="w-full aspect-[16/9] mb-3 overflow-hidden">
         <img 
           src={heroImage} 
-          alt="Indoor plant collection" 
+          alt="Pokémon world" 
           className="w-full h-full object-cover"
         />
       </div>
       <div className="">
         <h2 className="text-sm font-normal text-foreground mb-1">
-          Living Interiors
+          Gotta Catch 'Em All
         </h2>
         <p className="text-sm font-light text-foreground">
-          Curated indoor plants to transform your home and office
+          Discover and adopt Pokémon of every type for your team
         </p>
       </div>
     </section>

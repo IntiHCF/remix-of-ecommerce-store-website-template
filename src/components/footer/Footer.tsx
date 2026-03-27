@@ -4,79 +4,62 @@ const Footer = () => {
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
           <div>
-            <img 
-              src="/Linea_Jewelry_Inc-2.svg" 
-              alt="Linea Plants" 
-              className="mb-4 h-6 w-auto"
-            />
-            <p className="text-sm font-light text-black/70 leading-relaxed max-w-md mb-6">
-              Curated indoor plants for the modern home and office
-            </p>
-            
+            <img src="/Linea_Jewelry_Inc-2.svg" alt="Linea Pokémon" className="mb-4 h-6 w-auto" />
+            <p className="text-sm font-light text-black/70 leading-relaxed max-w-md mb-6">Your trusted source for adopting Pokémon of all types</p>
             <div className="space-y-2 text-sm font-light text-black/70">
               <div>
                 <p className="font-normal text-black mb-1">Visit Us</p>
-                <p>123 Madison Avenue</p>
-                <p>New York, NY 10016</p>
+                <p>123 Pallet Town Avenue</p>
+                <p>Kanto Region, KT 10016</p>
               </div>
               <div>
                 <p className="font-normal text-black mb-1 mt-3">Contact</p>
-                <p>+1 (212) 555-0123</p>
-                <p>hello@lineaplants.com</p>
+                <p>+1 (025) 555-PIKA</p>
+                <p>hello@lineapokemon.com</p>
               </div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h4 className="text-sm font-normal mb-4">Shop</h4>
               <ul className="space-y-2">
-                <li><a href="/category/new-in" className="text-sm font-light text-black/70 hover:text-black transition-colors">New In</a></li>
-                <li><a href="/category/indoor-plants" className="text-sm font-light text-black/70 hover:text-black transition-colors">Indoor Plants</a></li>
-                <li><a href="/category/office-plants" className="text-sm font-light text-black/70 hover:text-black transition-colors">Office Plants</a></li>
-                <li><a href="/category/succulents" className="text-sm font-light text-black/70 hover:text-black transition-colors">Succulents</a></li>
-                <li><a href="/category/hanging-plants" className="text-sm font-light text-black/70 hover:text-black transition-colors">Hanging Plants</a></li>
+                <li><a href="/category/new-in" className="text-sm font-light text-black/70 hover:text-black transition-colors">New Arrivals</a></li>
+                <li><a href="/category/fire-type" className="text-sm font-light text-black/70 hover:text-black transition-colors">Fire Type</a></li>
+                <li><a href="/category/water-type" className="text-sm font-light text-black/70 hover:text-black transition-colors">Water Type</a></li>
+                <li><a href="/category/grass-type" className="text-sm font-light text-black/70 hover:text-black transition-colors">Grass Type</a></li>
+                <li><a href="/category/electric-type" className="text-sm font-light text-black/70 hover:text-black transition-colors">Electric Type</a></li>
               </ul>
             </div>
-
             <div>
               <h4 className="text-sm font-normal mb-4">Support</h4>
               <ul className="space-y-2">
-                <li><a href="/about/plant-care-guide" className="text-sm font-light text-black/70 hover:text-black transition-colors">Plant Care Guide</a></li>
-                <li><a href="/about/sustainability" className="text-sm font-light text-black/70 hover:text-black transition-colors">Sustainability</a></li>
+                <li><a href="/about/trainer-guide" className="text-sm font-light text-black/70 hover:text-black transition-colors">Trainer Guide</a></li>
+                <li><a href="/about/pokémon-care" className="text-sm font-light text-black/70 hover:text-black transition-colors">Pokémon Care</a></li>
                 <li><a href="/about/customer-care" className="text-sm font-light text-black/70 hover:text-black transition-colors">Returns</a></li>
                 <li><a href="/about/customer-care" className="text-sm font-light text-black/70 hover:text-black transition-colors">Shipping</a></li>
                 <li><a href="/about/customer-care" className="text-sm font-light text-black/70 hover:text-black transition-colors">Contact</a></li>
               </ul>
             </div>
-
             <div>
               <h4 className="text-sm font-normal mb-4">Connect</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-sm font-light text-black/70 hover:text-black transition-colors">Instagram</a></li>
-                <li><a href="#" className="text-sm font-light text-black/70 hover:text-black transition-colors">Pinterest</a></li>
+                <li><a href="#" className="text-sm font-light text-black/70 hover:text-black transition-colors">Discord</a></li>
                 <li><a href="#" className="text-sm font-light text-black/70 hover:text-black transition-colors">Newsletter</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-
       <div className="border-t border-[#e5e5e5] -mx-6 px-6 pt-2">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm font-light text-black mb-1 md:mb-0">
             © 2024 Linea. All rights reserved. Template made by{" "}
-            <a href="https://www.liljeros.co" target="_blank" rel="noopener noreferrer" className="hover:text-black/70 transition-colors underline">
-              Rickard Liljeros
-            </a>
+            <a href="https://www.liljeros.co" target="_blank" rel="noopener noreferrer" className="hover:text-black/70 transition-colors underline">Rickard Liljeros</a>
           </p>
           <div className="flex space-x-6">
-            <a href="/privacy-policy" className="text-sm font-light text-black hover:text-black/70 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="text-sm font-light text-black hover:text-black/70 transition-colors">
-              Terms of Service
-            </a>
+            <a href="/privacy-policy" className="text-sm font-light text-black hover:text-black/70 transition-colors">Privacy Policy</a>
+            <a href="/terms-of-service" className="text-sm font-light text-black hover:text-black/70 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
