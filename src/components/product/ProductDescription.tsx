@@ -43,14 +43,14 @@ const ProductDescription = () => {
         {isDescriptionOpen && (
           <div className="pb-6 space-y-4">
             <p className="text-sm font-light text-muted-foreground leading-relaxed">
-              The Pantheon earrings embody architectural elegance with their clean, geometric design. 
-              Inspired by classical Roman architecture, these statement pieces feature a sophisticated 
-              interplay of curves and angles that catch and reflect light beautifully.
+              The Monstera Deliciosa, also known as the Swiss Cheese Plant, is one of the most 
+              iconic houseplants. Its large, glossy leaves with natural perforations make it a 
+              stunning focal point in any room.
             </p>
             <p className="text-sm font-light text-muted-foreground leading-relaxed">
-              Each earring is meticulously crafted from premium sterling silver with an 18k gold 
-              plating, ensuring both durability and luxury. The minimalist aesthetic makes them 
-              perfect for both everyday wear and special occasions.
+              Each plant is carefully selected from our nursery partners and shipped in a premium 
+              ceramic pot. Monsteras are known for their vigorous growth and can develop impressive 
+              fenestrations as they mature.
             </p>
           </div>
         )}
@@ -63,7 +63,7 @@ const ProductDescription = () => {
           onClick={() => setIsDetailsOpen(!isDetailsOpen)}
           className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
         >
-          <span>Product Details</span>
+          <span>Plant Details</span>
           {isDetailsOpen ? (
             <ChevronUp className="h-4 w-4" />
           ) : (
@@ -74,19 +74,19 @@ const ProductDescription = () => {
           <div className="pb-6 space-y-3">
             <div className="flex justify-between">
               <span className="text-sm font-light text-muted-foreground">SKU</span>
-              <span className="text-sm font-light text-foreground">LE-PTH-001</span>
+              <span className="text-sm font-light text-foreground">LP-MON-001</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Collection</span>
-              <span className="text-sm font-light text-foreground">Architectural Series</span>
+              <span className="text-sm font-light text-muted-foreground">Botanical Name</span>
+              <span className="text-sm font-light text-foreground">Monstera deliciosa</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Closure</span>
-              <span className="text-sm font-light text-foreground">Post and butterfly back</span>
+              <span className="text-sm font-light text-muted-foreground">Difficulty</span>
+              <span className="text-sm font-light text-foreground">Easy to moderate</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Hypoallergenic</span>
-              <span className="text-sm font-light text-foreground">Yes</span>
+              <span className="text-sm font-light text-muted-foreground">Pet Friendly</span>
+              <span className="text-sm font-light text-foreground">No — toxic to pets</span>
             </div>
           </div>
         )}
@@ -99,7 +99,7 @@ const ProductDescription = () => {
           onClick={() => setIsCareOpen(!isCareOpen)}
           className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
         >
-          <span>Care & Cleaning</span>
+          <span>Care Instructions</span>
           {isCareOpen ? (
             <ChevronUp className="h-4 w-4" />
           ) : (
@@ -109,13 +109,13 @@ const ProductDescription = () => {
         {isCareOpen && (
           <div className="pb-6 space-y-4">
             <ul className="space-y-2">
-              <li className="text-sm font-light text-muted-foreground">• Clean with a soft, dry cloth after each wear</li>
-              <li className="text-sm font-light text-muted-foreground">• Avoid contact with perfumes, lotions, and cleaning products</li>
-              <li className="text-sm font-light text-muted-foreground">• Store in the provided jewelry pouch when not wearing</li>
-              <li className="text-sm font-light text-muted-foreground">• Remove before swimming, exercising, or showering</li>
+              <li className="text-sm font-light text-muted-foreground">• Water when the top 2–3cm of soil feels dry</li>
+              <li className="text-sm font-light text-muted-foreground">• Place in bright, indirect light — avoid direct sun</li>
+              <li className="text-sm font-light text-muted-foreground">• Mist leaves regularly or use a humidifier</li>
+              <li className="text-sm font-light text-muted-foreground">• Feed with liquid fertilizer monthly during spring/summer</li>
             </ul>
             <p className="text-sm font-light text-muted-foreground">
-              For professional cleaning, visit your local jeweler or contact our customer service team.
+              For detailed plant care advice, visit our Plant Care Guide or contact our plant specialists.
             </p>
           </div>
         )}
@@ -148,26 +148,21 @@ const ProductDescription = () => {
         </Button>
         {isReviewsOpen && (
           <div className="pb-6 space-y-6">
-            {/* Review Product Button */}
             <ReviewProduct />
 
-            {/* Reviews List */}
             <div className="space-y-6">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar
-                        key={star}
-                        filled={true}
-                      />
+                      <CustomStar key={star} filled={true} />
                     ))}
                   </div>
                   <span className="text-sm font-light text-muted-foreground">Sarah M.</span>
                 </div>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "Absolutely stunning earrings! The quality is exceptional and they go with everything. 
-                  The architectural design is so unique and I get compliments every time I wear them."
+                  "Arrived in perfect condition! The plant is even more beautiful in person. 
+                  It's already putting out new leaves after just two weeks. The ceramic pot is lovely too."
                 </p>
               </div>
 
@@ -175,17 +170,14 @@ const ProductDescription = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex items-center">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar
-                        key={star}
-                        filled={star <= 4}
-                      />
+                      <CustomStar key={star} filled={star <= 4} />
                     ))}
                   </div>
                   <span className="text-sm font-light text-muted-foreground">Emma T.</span>
                 </div>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "Beautiful craftsmanship and comfortable to wear all day. The gold plating has held up 
-                  perfectly after months of regular wear. Highly recommend!"
+                  "Great plant, well packaged for shipping. It's thriving in my living room corner. 
+                  Would have loved a care card included but the online guide is helpful."
                 </p>
               </div>
 
@@ -193,17 +185,14 @@ const ProductDescription = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex items-center">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <CustomStar
-                        key={star}
-                        filled={true}
-                      />
+                      <CustomStar key={star} filled={true} />
                     ))}
                   </div>
                   <span className="text-sm font-light text-muted-foreground">Jessica R.</span>
                 </div>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                  "These earrings are a work of art. The minimalist design is elegant and sophisticated. 
-                  Perfect weight and the packaging was beautiful too."
+                  "This is my third order from LINEA and they never disappoint. The Monstera is 
+                  lush and healthy. My office looks like a jungle now and I love it!"
                 </p>
               </div>
             </div>

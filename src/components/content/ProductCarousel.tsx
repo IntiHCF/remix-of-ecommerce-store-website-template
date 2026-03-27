@@ -5,14 +5,14 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
-import haloImage from "@/assets/halo.jpg";
-import obliqueImage from "@/assets/oblique.jpg";
-import lintelImage from "@/assets/lintel.jpg";
-import shadowlineImage from "@/assets/shadowline.jpg";
-import organicEarring from "@/assets/organic-earring.png";
-import linkBracelet from "@/assets/link-bracelet.png";
+import monsteraImage from "@/assets/pantheon.jpg";
+import snakePlantImage from "@/assets/eclipse.jpg";
+import pothosImage from "@/assets/halo.jpg";
+import fiddleLeafImage from "@/assets/oblique.jpg";
+import peaceLilyImage from "@/assets/lintel.jpg";
+import zzPlantImage from "@/assets/shadowline.jpg";
+import hangingPlantImage from "@/assets/organic-earring.png";
+import officePlantImage from "@/assets/link-bracelet.png";
 
 interface Product {
   id: number;
@@ -25,45 +25,45 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "Pantheon",
-    category: "Earrings",
-    price: "€2,850",
-    image: pantheonImage,
+    name: "Monstera Deliciosa",
+    category: "Indoor Plants",
+    price: "€45",
+    image: monsteraImage,
   },
   {
     id: 2,
-    name: "Eclipse",
-    category: "Bracelets",
-    price: "€3,200",
-    image: eclipseImage,
+    name: "Snake Plant",
+    category: "Office Plants",
+    price: "€32",
+    image: snakePlantImage,
   },
   {
     id: 3,
-    name: "Halo",
-    category: "Earrings",
-    price: "€1,950",
-    image: haloImage,
+    name: "Golden Pothos",
+    category: "Hanging Plants",
+    price: "€24",
+    image: pothosImage,
   },
   {
     id: 4,
-    name: "Oblique",
-    category: "Earrings",
-    price: "€1,650",
-    image: obliqueImage,
+    name: "Fiddle Leaf Fig",
+    category: "Indoor Plants",
+    price: "€65",
+    image: fiddleLeafImage,
   },
   {
     id: 5,
-    name: "Lintel",
-    category: "Earrings",
-    price: "€2,250",
-    image: lintelImage,
+    name: "Peace Lily",
+    category: "Indoor Plants",
+    price: "€28",
+    image: peaceLilyImage,
   },
   {
     id: 6,
-    name: "Shadowline",
-    category: "Bracelets",
-    price: "€3,950",
-    image: shadowlineImage,
+    name: "ZZ Plant",
+    category: "Office Plants",
+    price: "€38",
+    image: zzPlantImage,
   },
 ];
 
@@ -93,8 +93,8 @@ const ProductCarousel = () => {
                           className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
                         />
                         <img
-                          src={product.category === "Earrings" ? organicEarring : linkBracelet}
-                          alt={`${product.name} lifestyle`}
+                          src={product.category === "Hanging Plants" ? hangingPlantImage : officePlantImage}
+                          alt={`${product.name} in context`}
                           className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 group-hover:opacity-100"
                         />
                         <div className="absolute inset-0 bg-black/[0.03]"></div>

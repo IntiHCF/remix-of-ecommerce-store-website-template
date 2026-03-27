@@ -5,8 +5,8 @@ const StatusBar = () => {
   
   const usps = [
     "Free shipping over €50",
-    "365 days warranty",
-    "+100,000 happy customers"
+    "30-day plant health guarantee",
+    "+100,000 happy plant parents"
   ];
 
   useEffect(() => {

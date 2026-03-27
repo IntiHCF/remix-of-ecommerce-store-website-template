@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
-import haloImage from "@/assets/halo.jpg";
-import obliqueImage from "@/assets/oblique.jpg";
-import lintelImage from "@/assets/lintel.jpg";
-import shadowlineImage from "@/assets/shadowline.jpg";
-import organicEarring from "@/assets/organic-earring.png";
-import linkBracelet from "@/assets/link-bracelet.png";
+import monsteraImage from "@/assets/pantheon.jpg";
+import snakePlantImage from "@/assets/eclipse.jpg";
+import pothosImage from "@/assets/halo.jpg";
+import fiddleLeafImage from "@/assets/oblique.jpg";
+import peaceLilyImage from "@/assets/lintel.jpg";
+import zzPlantImage from "@/assets/shadowline.jpg";
+import hangingPlantImage from "@/assets/organic-earring.png";
+import officePlantImage from "@/assets/link-bracelet.png";
 
 interface Product {
   id: number;
@@ -19,178 +19,31 @@ interface Product {
   isNew?: boolean;
 }
 
-// Extended product list for category page
 const products: Product[] = [
-  {
-    id: 1,
-    name: "Pantheon",
-    category: "Earrings",
-    price: "€2,850",
-    image: pantheonImage,
-    isNew: true,
-  },
-  {
-    id: 2,
-    name: "Eclipse",
-    category: "Bracelets",
-    price: "€3,200",
-    image: eclipseImage,
-  },
-  {
-    id: 3,
-    name: "Halo",
-    category: "Earrings",
-    price: "€1,950",
-    image: haloImage,
-    isNew: true,
-  },
-  {
-    id: 4,
-    name: "Oblique",
-    category: "Earrings",
-    price: "€1,650",
-    image: obliqueImage,
-  },
-  {
-    id: 5,
-    name: "Lintel",
-    category: "Earrings",
-    price: "€2,250",
-    image: lintelImage,
-  },
-  {
-    id: 6,
-    name: "Shadowline",
-    category: "Bracelets",
-    price: "€3,950",
-    image: shadowlineImage,
-  },
-  {
-    id: 7,
-    name: "Meridian",
-    category: "Earrings",
-    price: "€2,450",
-    image: pantheonImage,
-  },
-  {
-    id: 8,
-    name: "Vertex",
-    category: "Bracelets",
-    price: "€2,800",
-    image: eclipseImage,
-  },
-  {
-    id: 9,
-    name: "Apex",
-    category: "Earrings",
-    price: "€1,550",
-    image: haloImage,
-  },
-  {
-    id: 10,
-    name: "Zenith",
-    category: "Earrings",
-    price: "€1,850",
-    image: obliqueImage,
-  },
-  {
-    id: 11,
-    name: "Prism",
-    category: "Earrings",
-    price: "€2,050",
-    image: lintelImage,
-  },
-  {
-    id: 12,
-    name: "Radiant",
-    category: "Bracelets",
-    price: "€3,650",
-    image: shadowlineImage,
-  },
-  {
-    id: 13,
-    name: "Stellar",
-    category: "Earrings",
-    price: "€2,150",
-    image: pantheonImage,
-  },
-  {
-    id: 14,
-    name: "Cosmos",
-    category: "Bracelets",
-    price: "€2,950",
-    image: eclipseImage,
-  },
-  {
-    id: 15,
-    name: "Aurora",
-    category: "Earrings",
-    price: "€1,750",
-    image: haloImage,
-  },
-  {
-    id: 16,
-    name: "Nebula",
-    category: "Earrings",
-    price: "€1,850",
-    image: obliqueImage,
-  },
-  {
-    id: 17,
-    name: "Orbit",
-    category: "Earrings",
-    price: "€2,350",
-    image: lintelImage,
-  },
-  {
-    id: 18,
-    name: "Galaxy",
-    category: "Bracelets",
-    price: "€3,450",
-    image: shadowlineImage,
-  },
-  {
-    id: 19,
-    name: "Lunar",
-    category: "Earrings",
-    price: "€2,050",
-    image: pantheonImage,
-  },
-  {
-    id: 20,
-    name: "Solar",
-    category: "Bracelets",
-    price: "€3,150",
-    image: eclipseImage,
-  },
-  {
-    id: 21,
-    name: "Astral",
-    category: "Earrings",
-    price: "€1,650",
-    image: haloImage,
-  },
-  {
-    id: 22,
-    name: "Cosmic",
-    category: "Earrings",
-    price: "€1,950",
-    image: obliqueImage,
-  },
-  {
-    id: 23,
-    name: "Celestial",
-    category: "Earrings",
-    price: "€2,250",
-    image: lintelImage,
-  },
-  {
-    id: 24,
-    name: "Ethereal",
-    category: "Bracelets",
-    price: "€3,750",
-    image: shadowlineImage,
-  },
+  { id: 1, name: "Monstera Deliciosa", category: "Indoor Plants", price: "€45", image: monsteraImage, isNew: true },
+  { id: 2, name: "Snake Plant", category: "Office Plants", price: "€32", image: snakePlantImage },
+  { id: 3, name: "Golden Pothos", category: "Hanging Plants", price: "€24", image: pothosImage, isNew: true },
+  { id: 4, name: "Fiddle Leaf Fig", category: "Indoor Plants", price: "€65", image: fiddleLeafImage },
+  { id: 5, name: "Peace Lily", category: "Indoor Plants", price: "€28", image: peaceLilyImage },
+  { id: 6, name: "ZZ Plant", category: "Office Plants", price: "€38", image: zzPlantImage },
+  { id: 7, name: "Rubber Plant", category: "Indoor Plants", price: "€42", image: monsteraImage },
+  { id: 8, name: "Calathea Orbifolia", category: "Indoor Plants", price: "€35", image: snakePlantImage },
+  { id: 9, name: "String of Hearts", category: "Hanging Plants", price: "€22", image: pothosImage },
+  { id: 10, name: "Bird of Paradise", category: "Indoor Plants", price: "€85", image: fiddleLeafImage },
+  { id: 11, name: "Boston Fern", category: "Hanging Plants", price: "€26", image: peaceLilyImage },
+  { id: 12, name: "Philodendron", category: "Office Plants", price: "€30", image: zzPlantImage },
+  { id: 13, name: "Aloe Vera", category: "Succulents", price: "€18", image: monsteraImage },
+  { id: 14, name: "Dracaena", category: "Office Plants", price: "€48", image: snakePlantImage },
+  { id: 15, name: "Spider Plant", category: "Hanging Plants", price: "€20", image: pothosImage },
+  { id: 16, name: "Chinese Evergreen", category: "Indoor Plants", price: "€34", image: fiddleLeafImage },
+  { id: 17, name: "Jade Plant", category: "Succulents", price: "€22", image: peaceLilyImage },
+  { id: 18, name: "Parlor Palm", category: "Office Plants", price: "€36", image: zzPlantImage },
+  { id: 19, name: "Echeveria Set", category: "Succulents", price: "€28", image: monsteraImage },
+  { id: 20, name: "Areca Palm", category: "Indoor Plants", price: "€55", image: snakePlantImage },
+  { id: 21, name: "English Ivy", category: "Hanging Plants", price: "€19", image: pothosImage },
+  { id: 22, name: "Croton", category: "Indoor Plants", price: "€32", image: fiddleLeafImage },
+  { id: 23, name: "Haworthia", category: "Succulents", price: "€16", image: peaceLilyImage },
+  { id: 24, name: "Kentia Palm", category: "Office Plants", price: "€72", image: zzPlantImage },
 ];
 
 const ProductGrid = () => {
@@ -210,8 +63,8 @@ const ProductGrid = () => {
                       className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
                     />
                     <img
-                      src={product.category === "Earrings" ? organicEarring : linkBracelet}
-                      alt={`${product.name} lifestyle`}
+                      src={product.category === "Hanging Plants" ? hangingPlantImage : officePlantImage}
+                      alt={`${product.name} in context`}
                       className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 bg-black/[0.03]"></div>

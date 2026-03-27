@@ -31,12 +31,12 @@ const ProductInfo = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
-                <Link to="/category/earrings">Earrings</Link>
+                <Link to="/category/indoor-plants">Indoor Plants</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>Pantheon</BreadcrumbPage>
+              <BreadcrumbPage>Monstera Deliciosa</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -46,11 +46,11 @@ const ProductInfo = () => {
       <div className="space-y-2">
         <div className="flex justify-between items-start">
           <div>
-            <p className="text-sm font-light text-muted-foreground mb-1">Earrings</p>
-            <h1 className="text-2xl md:text-3xl font-light text-foreground">Pantheon</h1>
+            <p className="text-sm font-light text-muted-foreground mb-1">Indoor Plants</p>
+            <h1 className="text-2xl md:text-3xl font-light text-foreground">Monstera Deliciosa</h1>
           </div>
           <div className="text-right">
-            <p className="text-xl font-light text-foreground">€2,850</p>
+            <p className="text-xl font-light text-foreground">€45</p>
           </div>
         </div>
       </div>
@@ -58,23 +58,23 @@ const ProductInfo = () => {
       {/* Product details */}
       <div className="space-y-4 py-4 border-b border-border">
         <div className="space-y-2">
-          <h3 className="text-sm font-light text-foreground">Material</h3>
-          <p className="text-sm font-light text-muted-foreground">18k Gold Plated Sterling Silver</p>
+          <h3 className="text-sm font-light text-foreground">Pot Size</h3>
+          <p className="text-sm font-light text-muted-foreground">17cm ceramic pot included</p>
         </div>
         
         <div className="space-y-2">
-          <h3 className="text-sm font-light text-foreground">Dimensions</h3>
-          <p className="text-sm font-light text-muted-foreground">2.5cm x 1.2cm</p>
+          <h3 className="text-sm font-light text-foreground">Plant Height</h3>
+          <p className="text-sm font-light text-muted-foreground">45–55cm (including pot)</p>
         </div>
         
         <div className="space-y-2">
-          <h3 className="text-sm font-light text-foreground">Weight</h3>
-          <p className="text-sm font-light text-muted-foreground">4.2g per earring</p>
+          <h3 className="text-sm font-light text-foreground">Light</h3>
+          <p className="text-sm font-light text-muted-foreground">Bright indirect light</p>
         </div>
         
         <div className="space-y-2">
           <h3 className="text-sm font-light text-foreground">Editor's notes</h3>
-          <p className="text-sm font-light text-muted-foreground italic">"A modern interpretation of classical architecture, these earrings bridge timeless elegance with contemporary minimalism."</p>
+          <p className="text-sm font-light text-muted-foreground italic">"The Monstera is the quintessential statement plant — its iconic split leaves bring tropical elegance to any interior."</p>
         </div>
       </div>
 
